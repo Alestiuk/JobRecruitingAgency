@@ -5,4 +5,6 @@ module com.example.jobrecruitingagency {
 
     opens com.example.jobrecruitingagency to javafx.fxml;
     exports com.example.jobrecruitingagency;
+    exports com.example.jobrecruitingagency.Abir_2331415;
+    opens com.example.jobrecruitingagency.Abir_2331415 to javafx.fxml;
 }

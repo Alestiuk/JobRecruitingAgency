@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="$CONTROLLER_NAME$">
+   <children>
+      <Label layoutX="55.0" layoutY="45.0" text="Full Name" />
+      <TextField layoutX="120.0" layoutY="41.0" promptText="Your Name" />
+      <Label layoutX="291.0" layoutY="45.0" text="Gender" />
+      <RadioButton layoutX="365.0" layoutY="45.0" mnemonicParsing="false" text="Male" />
+      <RadioButton layoutX="431.0" layoutY="45.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="55.0" layoutY="84.0" text="Select your skill from following list" />
+      <ComboBox layoutX="55.0" layoutY="102.0" prefHeight="26.0" prefWidth="401.0" />
+      <Label layoutX="55.0" layoutY="144.0" text="Email (required)" />
+      <TextField layoutX="145.0" layoutY="140.0" promptText="Email Address" />
+      <Label layoutX="311.0" layoutY="144.0" text="Mobile (required)" />
+      <TextField layoutX="413.0" layoutY="140.0" promptText="Your Phone Number" />
+      <Label layoutX="55.0" layoutY="200.0" text="Password" />
+      <TextField layoutX="120.0" layoutY="196.0" promptText="Password" />
+      <Label layoutX="285.0" layoutY="200.0" text="Confirm Password" />
+      <TextField layoutX="389.0" layoutY="196.0" promptText="Reype Password" />
+      <Button layoutX="242.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Create Account" textFill="WHITE" />
+   </children>
+</AnchorPane>

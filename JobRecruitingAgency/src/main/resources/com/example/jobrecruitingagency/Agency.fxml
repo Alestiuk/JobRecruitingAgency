@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="339.0" prefWidth="1223.0" style="-fx-background-color: 0099f6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.AgencyController">
+   <children>
+      <Label layoutX="6.0" layoutY="25.0" text="User Name:" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="52.0" text="Email:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="77.0" text="Phone Number:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="141.0" />
+      <Label layoutX="9.0" layoutY="113.0" text="User Type:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="147.0" text="Company Name:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="182.0" text="Resume Upload:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="101.0" text="Password:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userNameTF" layoutX="131.0" layoutY="25.0" />
+      <TextField fx:id="emailTF" layoutX="132.0" layoutY="50.0" />
+      <TextField fx:id="phoneNumberTF" layoutX="132.0" layoutY="76.0" />
+      <ComboBox fx:id="UserTypeCB" blendMode="DARKEN" layoutX="130.0" layoutY="112.0" prefWidth="150.0" />
+      <TextField fx:id="companyNameTF" layoutX="150.0" layoutY="146.0" promptText="for Recruiter" />
+      <TextField layoutX="150.0" layoutY="180.0" promptText="for Candidate" />
+      <PasswordField fx:id="passwordTF" layoutX="396.0" layoutY="100.0" />
+      <Button layoutX="205.0" layoutY="236.0" mnemonicParsing="false" onAction="#signUpOA" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #49A42D;" text="Sign Up" textFill="WHITE" />
+      <Label layoutX="288.0" layoutY="26.0" text="Date of Birth:" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="396.0" layoutY="25.0" />
+      <RadioButton fx:id="maleRadioButton" layoutX="390.0" layoutY="68.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="471.0" layoutY="68.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="288.0" layoutY="66.0" text="Gender:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="52.0" endY="-61.0" layoutX="545.0" layoutY="85.0" startX="52.0" startY="212.60000610351562" />
+      <Label layoutX="630.0" layoutY="36.0" text="User Name:" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName2TF" layoutX="747.0" layoutY="35.0" />
+      <Label layoutX="635.0" layoutY="77.0" text="Password:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password2TF" layoutX="747.0" layoutY="76.0" />
+      <Button layoutX="695.0" layoutY="122.0" mnemonicParsing="false" onAction="#singInOA" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #6495ED;" text="Sign In" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.LogIn">
+   <children>
+      <Label layoutX="136.0" layoutY="142.0" text="Phone Number:">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="152.0" />
+      <Label layoutX="166.0" layoutY="183.0" text="Password:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTF" layoutX="253.0" layoutY="139.0" />
+      <PasswordField fx:id="passwordTF" layoutX="253.0" layoutY="179.0" />
+      <Button layoutX="242.0" layoutY="234.0" mnemonicParsing="false" onAction="#singInOA" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #6495ED;" text="Log In" textFill="WHITE" />
+   </children>
+</AnchorPane>

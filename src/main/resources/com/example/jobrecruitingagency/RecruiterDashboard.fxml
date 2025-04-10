@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="369.0" prefWidth="617.0" style="-fx-background-color: skyblue;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.jobrecruitingagency.RecruiterDashboard">
+    <ButtonBar layoutX="109.0" layoutY="185.0" prefHeight="42.0" prefWidth="398.0">
+      <buttons>
+          <Button mnemonicParsing="false" prefHeight="35.0" style="-fx-border-color: black;" text="Post Job"/>
+          <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;" text="Job Application"/>
+          <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;"
+                  text="Schedule Interviews"/>
+      </buttons>
+    </ButtonBar>
+    <ButtonBar layoutX="71.0" layoutY="235.0" prefHeight="40.0" prefWidth="458.0">
+      <buttons>
+          <Button mnemonicParsing="false" prefHeight="31.0" style="-fx-border-color: black;" text="Manage Jobs"/>
+          <Button mnemonicParsing="false" prefHeight="31.0" style="-fx-border-color: black;" text="Reports"/>
+          <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="182.0" style="-fx-border-color: black;"
+                  text="Select Final Candidate"/>
+      </buttons>
+    </ButtonBar>
+    <Button layoutX="192.0" layoutY="150.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0"
+            style="-fx-border-color: black;" text="Messages"/>
+    <Button layoutX="192.0" layoutY="285.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0"
+            style="-fx-border-color: black;" text="Feedback &amp; Improvement"/>
+    <Text fill="WHITE" layoutX="124.0" layoutY="80.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0"
+          text="Recruiter Dashboard" textAlignment="CENTER" wrappingWidth="369.6000854492188">
+        <font>
+          <Font name="Arial Bold" size="34.0"/>
+        </font>
+    </Text>
+</AnchorPane>

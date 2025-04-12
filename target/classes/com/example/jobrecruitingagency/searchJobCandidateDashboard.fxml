@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.SearchJobCandidateDashboard">
+   <children>
+      <Button layoutX="393.0" layoutY="75.0" mnemonicParsing="false" onAction="#searchButtonCandidateDashboardOA" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: green;" text="Search" textFill="WHITE" />
+      <ComboBox fx:id="jobTypeCBSearchCandidateDashboard" layoutX="140.0" layoutY="76.0" prefWidth="150.0" promptText="Job Type" />
+      <CheckBox fx:id="statusCheckBoxCandidateSearch" layoutX="310.0" layoutY="80.0" mnemonicParsing="false" text="Active">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <TableView fx:id="tableViewCandidateSearch" layoutX="17.0" layoutY="132.0" prefHeight="245.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="jobTitleTCCandidateSearch" prefWidth="198.39996337890625" text="Job Tile" />
+          <TableColumn fx:id="salaryTCCandidateSearch" prefWidth="152.0" text="Salary" />
+            <TableColumn fx:id="deadlineTCCandidateSearch" prefWidth="145.5999755859375" text="Deadline" />
+            <TableColumn fx:id="statusTCCandidateSearch" prefWidth="76.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#homeButtonCandidateDashboardOA" style="-fx-background-color: blue;" text="Home" textFill="WHITE" />
+      <Text layoutX="245.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Job">
+         <font>
+            <Font name="Cambria Bold" size="27.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

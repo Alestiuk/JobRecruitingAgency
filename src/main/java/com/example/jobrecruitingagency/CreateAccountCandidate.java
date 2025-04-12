@@ -1,29 +1,39 @@
 package com.example.jobrecruitingagency;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+
 public class CreateAccountCandidate
 {
+
     @javafx.fxml.FXML
-    private TextField fullNameTF;
+    private TextField emailTFCreateAccountCandidate;
     @javafx.fxml.FXML
-    private TextField phoneTF;
+    private RadioButton femaleRBcreateAccountForCandidate;
     @javafx.fxml.FXML
-    private TextField emailTF;
+    private TextField retypePasswordTFCreateAccountCandidate;
     @javafx.fxml.FXML
-    private RadioButton femaleRadioButton;
+    private TextField passwordTFCreateAccountCandidate;
     @javafx.fxml.FXML
-    private TextField retypePasswordTF;
+    private TextField fullNameTFCreateAccountCandidate;
     @javafx.fxml.FXML
-    private ComboBox selectSkillCB;
+    private ComboBox selectSkillCBcreateAccountForCandidate;
     @javafx.fxml.FXML
-    private TextField passwordTF;
+    private TextField mobileTFCreateAccountCandidate;
     @javafx.fxml.FXML
-    private RadioButton maleRadioButton;
+    private RadioButton maleRBcreateAccountForCandidate;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void createAccountOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void createAccountForCandidateOA(ActionEvent actionEvent) {
     }
 }

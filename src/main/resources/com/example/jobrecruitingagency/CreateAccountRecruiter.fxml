@@ -24,42 +24,42 @@
          </font>
       </Text>
       <Label layoutX="41.0" layoutY="88.0" text="Username" />
-      <TextField layoutX="115.0" layoutY="84.0" />
+      <TextField fx:id="userNameTFCreateRecruiterAccount" layoutX="115.0" layoutY="84.0" />
       <Label layoutX="277.0" layoutY="88.0" text="Password" />
-      <TextField layoutX="337.0" layoutY="84.0" />
+      <TextField fx:id="passwordTFCreateRecruiterAccount" layoutX="337.0" layoutY="84.0" />
       <Label layoutX="503.0" layoutY="88.0" text="Confirm Password" />
-      <TextField layoutX="605.0" layoutY="84.0" />
+      <TextField fx:id="retypePasswordTFCreateRecruiterAccount" layoutX="605.0" layoutY="84.0" />
       <Label layoutX="41.0" layoutY="192.0" text="Company Name" />
-      <TextField layoutX="139.0" layoutY="188.0" />
+      <TextField fx:id="companyNameTFCreateRecruiterAccount" layoutX="139.0" layoutY="188.0" />
       <Label layoutX="302.0" layoutY="192.0" text="Year of Establishment" />
-      <TextField layoutX="428.0" layoutY="188.0" />
+      <TextField fx:id="yearOfEstablishTFCreateRecruiterAccount" layoutX="428.0" layoutY="188.0" />
       <Label layoutX="41.0" layoutY="238.0" text="Number of Employees" />
-      <RadioButton layoutX="178.0" layoutY="238.0" mnemonicParsing="false" text="1-25" />
-      <RadioButton layoutX="253.0" layoutY="238.0" mnemonicParsing="false" text="26-50" />
-      <RadioButton layoutX="329.0" layoutY="238.0" mnemonicParsing="false" text="51-100" />
-      <RadioButton layoutX="421.0" layoutY="238.0" mnemonicParsing="false" text="101-500" />
+      <RadioButton fx:id="oneToTwintyFiveRB" layoutX="178.0" layoutY="238.0" mnemonicParsing="false" text="1-25" />
+      <RadioButton fx:id="TwintySixToFiftyRB" layoutX="253.0" layoutY="238.0" mnemonicParsing="false" text="26-50" />
+      <RadioButton fx:id="FiftyOneToHundredRB" layoutX="329.0" layoutY="238.0" mnemonicParsing="false" text="51-100" />
+      <RadioButton fx:id="HundredOneToFiveHundredRB" layoutX="421.0" layoutY="238.0" mnemonicParsing="false" text="101-500" />
       <Label layoutX="46.0" layoutY="297.0" text="Company Address" />
-      <TextArea layoutX="159.0" layoutY="273.0" prefHeight="83.0" prefWidth="422.0" />
+      <TextArea fx:id="companyAddressTFCreateRecruiterAccount" layoutX="159.0" layoutY="273.0" prefHeight="83.0" prefWidth="422.0" />
       <Label layoutX="48.0" layoutY="383.0" text="Industry Type" />
-      <ComboBox layoutX="138.0" layoutY="379.0" prefWidth="150.0" />
+      <ComboBox fx:id="industryTypeCB" layoutX="138.0" layoutY="379.0" prefWidth="150.0" />
       <Label layoutX="48.0" layoutY="427.0" text="Business/ Trade License No" />
-      <TextField layoutX="202.0" layoutY="423.0" />
+      <TextField fx:id="tradeLicenseNoTFCreateRecruiterAccount" layoutX="202.0" layoutY="423.0" />
       <Label layoutX="370.0" layoutY="427.0" text="Website(if any)" />
-      <TextField layoutX="463.0" layoutY="423.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="websiteLinkTFCreateRecruiterAccount" layoutX="463.0" layoutY="423.0" prefHeight="26.0" prefWidth="186.0" />
       <Text fill="#004dff" layoutX="45.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provide Contact Person Information" wrappingWidth="250.1366424560547">
          <font>
             <Font name="Calibri Bold" size="16.0" />
          </font>
       </Text>
       <Label layoutX="48.0" layoutY="507.0" text="Contact Person's Name" />
-      <TextField layoutX="178.0" layoutY="503.0" />
+      <TextField fx:id="contactPersonNameTFCreateRecruiterAccount" layoutX="178.0" layoutY="503.0" />
       <Label layoutX="337.0" layoutY="507.0" text="Contact Person's Designation" />
-      <TextField layoutX="506.0" layoutY="503.0" />
+      <TextField fx:id="contactPersonDesignationTFCreateRecruiterAccount" layoutX="506.0" layoutY="503.0" />
       <Label layoutX="48.0" layoutY="541.0" text="Contact Person's Email" />
-      <TextField layoutX="178.0" layoutY="537.0" />
+      <TextField fx:id="contactPersonEmailTFCreateRecruiterAccount" layoutX="178.0" layoutY="537.0" />
       <Label layoutX="337.0" layoutY="541.0" text="Contact Person's Mobile" />
-      <TextField layoutX="506.0" layoutY="537.0" />
+      <TextField fx:id="contactPersonMobileTFCreateRecruiterAccount" layoutX="506.0" layoutY="537.0" />
       <ScrollBar layoutX="768.0" orientation="VERTICAL" prefHeight="742.0" prefWidth="18.0" />
-      <Button layoutX="286.0" layoutY="655.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: green;" text="Continue" textFill="WHITE" />
+      <Button layoutX="286.0" layoutY="655.0" mnemonicParsing="false" onAction="#createAccountOARecruiter" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: green;" text="Create Account" textFill="WHITE" />
    </children>
 </AnchorPane>

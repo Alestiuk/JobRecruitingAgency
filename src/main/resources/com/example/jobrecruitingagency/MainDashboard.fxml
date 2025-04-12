@@ -12,17 +12,17 @@
             <Font name="SansSerif Regular" size="51.0" />
          </font>
       </Text>
-      <Button layoutX="549.0" layoutY="37.0" mnemonicParsing="false" text="SUPPORT">
+      <Button layoutX="549.0" layoutY="37.0" mnemonicParsing="false" onAction="#supportButtonOAmainDashboard" text="SUPPORT">
          <font>
             <Font name="Nirmala UI" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="344.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Log In" textFill="#1f2180">
+      <Button layoutX="344.0" layoutY="37.0" mnemonicParsing="false" onAction="#logInButtonOAmainDashboard" style="-fx-background-color: blue;" text="Log In" textFill="#1f2180">
          <font>
             <Font name="Nirmala UI" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="409.0" layoutY="36.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: green;" text="Create new account" textFill="WHITE">
+      <Button layoutX="409.0" layoutY="36.0" mnemonicParsing="false" onAction="#createNewAccountButtonOAmainDashboard" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: green;" text="Create new account" textFill="WHITE">
          <font>
             <Font name="Nirmala UI" size="12.0" />
          </font>

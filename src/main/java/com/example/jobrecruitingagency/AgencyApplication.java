@@ -10,9 +10,9 @@ import java.io.IOException;
 public class AgencyApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("Agency.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("MainDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("JOB RECRUITING AGENCY");
         stage.setScene(scene);
         stage.show();
     }

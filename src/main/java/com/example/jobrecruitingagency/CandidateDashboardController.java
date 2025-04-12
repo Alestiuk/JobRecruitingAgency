@@ -1,9 +1,20 @@
 package com.example.jobrecruitingagency;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-public class CandidateDashboard
+import java.io.IOException;
+
+public class CandidateDashboardController
 {
+    @javafx.fxml.FXML
+    private Label outputLabelCandidateDashboard;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -38,5 +49,17 @@ public class CandidateDashboard
 
     @javafx.fxml.FXML
     public void searchButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOARecruiterDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("MainDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Main Dashboard");
+        stage.show();
     }
 }

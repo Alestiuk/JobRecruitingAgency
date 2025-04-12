@@ -7,28 +7,35 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.CandidateDashboard">
-   <children>
-      <Text fill="WHITE" layoutX="115.0" layoutY="71.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Candidate Dashboard" textAlignment="CENTER" wrappingWidth="369.6000854492188">
-         <font>
-            <Font name="Arial Bold" size="34.0" />
-         </font>
-      </Text>
-      <Button layoutX="184.0" layoutY="172.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0" style="-fx-border-color: black;" text="Search Jobs" />
-      <ButtonBar layoutX="13.0" layoutY="207.0" prefHeight="42.0" prefWidth="556.0">
-         <buttons>
-            <Button minWidth="33.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="289.0" style="-fx-border-color: black;" text="Manage Profile" />
-            <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;" text="Apply for a Job" />
-            <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;" text="Track Applications" />
-         </buttons>
-      </ButtonBar>
-      <ButtonBar layoutX="13.0" layoutY="256.0" prefHeight="40.0" prefWidth="574.0">
-         <buttons>
-            <Button mnemonicParsing="false" prefHeight="38.0" style="-fx-border-color: black;" text="Interview Invitation" />
-            <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="208.0" style="-fx-border-color: black;" text="Interview Preparation" />
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="194.0" style="-fx-border-color: black;" text="Job Offer" />
-         </buttons>
-      </ButtonBar>
-      <Button layoutX="184.0" layoutY="307.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0" style="-fx-border-color: black;" text="Provide Feedback" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: sky blue;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.jobrecruitingagency.CandidateDashboard">
+   <Text fill="WHITE" layoutX="115.0" layoutY="71.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0"
+         text="Candidate Dashboard" textAlignment="CENTER" wrappingWidth="369.6000854492188">
+      <font>
+         <Font name="Arial Bold" size="34.0"/>
+      </font>
+   </Text>
+   <Button layoutX="184.0" layoutY="172.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0"
+           style="-fx-border-color: black;" text="Search Jobs"/>
+   <ButtonBar layoutX="13.0" layoutY="207.0" prefHeight="42.0" prefWidth="556.0">
+      <buttons>
+         <Button minWidth="33.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="289.0"
+                 style="-fx-border-color: black;" text="Manage Profile"/>
+         <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;" text="Apply for a Job"/>
+         <Button mnemonicParsing="false" prefHeight="34.0" style="-fx-border-color: black;" text="Track Applications"/>
+      </buttons>
+   </ButtonBar>
+   <ButtonBar layoutX="13.0" layoutY="256.0" prefHeight="40.0" prefWidth="574.0">
+      <buttons>
+         <Button mnemonicParsing="false" prefHeight="38.0" style="-fx-border-color: black;"
+                 text="Interview Invitation"/>
+         <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="208.0" style="-fx-border-color: black;"
+                 text="Interview Preparation"/>
+         <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="194.0" style="-fx-border-color: black;"
+                 text="Job Offer"/>
+      </buttons>
+   </ButtonBar>
+   <Button layoutX="184.0" layoutY="307.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0"
+           style="-fx-border-color: black;" text="Provide Feedback"/>
 </AnchorPane>

@@ -23,6 +23,8 @@ public class LogInController
 
     @javafx.fxml.FXML
     public void initialize() {
+        accountTypeCBLogIn.getItems().addAll("Recruiter","Candidate","Training Manager","Recruitment Consultant","IT " +
+                "Support Manager","HR Manager","Accountant","Agency Manager");
     }
 
 

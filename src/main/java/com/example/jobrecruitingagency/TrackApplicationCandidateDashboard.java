@@ -6,37 +6,39 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SearchJobCandidateDashboard
+public class TrackApplicationCandidateDashboard
 {
     @javafx.fxml.FXML
-    private TableView<String> tableViewCandidateSearch;
+    private TableColumn jobTitleTCCandidateTrackApplication;
     @javafx.fxml.FXML
-    private TableColumn statusTCCandidateSearch;
+    private TableColumn salaryTCCandidateTrackApplication;
     @javafx.fxml.FXML
-    private TableColumn jobTitleTCCandidateSearch;
+    private CheckBox acceptedCheckBoxCandidateTrackApplication;
     @javafx.fxml.FXML
-    private TableColumn salaryTCCandidateSearch;
+    private TableColumn statusTCCandidateTrackApplication;
     @javafx.fxml.FXML
-    private CheckBox statusCheckBoxCandidateSearch;
-    @javafx.fxml.FXML
-    private TableColumn deadlineTCCandidateSearch;
-    @javafx.fxml.FXML
-    private ComboBox jobTypeCBSearchCandidateDashboard;
-
+    private TableView tableViewCandidateSearch;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void homeButtonCandidateDashboardOA(ActionEvent actionEvent) throws IOException {
+    public void showAllButtonCandidateTrackApplicationOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchButtonCandidateTrackApplicationOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void homeButtonCandidateTrackApplicationOA(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("CandidateDashboard.fxml"));
         root = fxmlLoader.load();
@@ -48,15 +50,6 @@ public class SearchJobCandidateDashboard
     }
 
     @javafx.fxml.FXML
-    public void searchButtonCandidateDashboardOA(ActionEvent actionEvent) {
-    }
-
-
-    @Deprecated
-    public void clearButtonCandidateDashboardOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void clearButtonSearchJobCandidateDashboardOA(ActionEvent actionEvent) {
+    public void clearButtonTrackApplicationRecruiterDashboardOA(ActionEvent actionEvent) {
     }
 }

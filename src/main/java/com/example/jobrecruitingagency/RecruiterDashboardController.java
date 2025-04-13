@@ -17,14 +17,36 @@ public class RecruiterDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        outputLabelOfRecruiterDashboard.setText(" WELCOME TO Recruiter Dashboard");
     }
 
     @javafx.fxml.FXML
-    public void feedbackImprovementButtonOARecruiterDash(ActionEvent actionEvent) {
+    public void feedbackImprovementButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
+
     }
 
     @javafx.fxml.FXML
-    public void jobApplicationButtonOARecruiterDash(ActionEvent actionEvent) {
+    public void jobApplicationButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("jobApplicationRecruiterDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Job Application");
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOARecruiterDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("MainDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Main Dashboard");
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -46,29 +68,19 @@ public class RecruiterDashboardController
     @javafx.fxml.FXML
     public void postJobButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("JobPosting.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("JobPosting" +
+                ".fxml"));
         root = fxmlLoader.load();
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Post Job");
         stage.show();
+
+
     }
 
     @javafx.fxml.FXML
     public void selectFinalCandidateButtonOARecruiterDash(ActionEvent actionEvent) {
-    }
-
-
-    @javafx.fxml.FXML
-    public void logOutButtonOARecruiterDashboard(ActionEvent actionEvent) throws IOException {
-        Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("MainDashboard.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root) ;
-        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Main Dashboard");
-        stage.show();
     }
 }

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.CandidateDashboardController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.CandidateDashboardController">
    <Text fill="WHITE" layoutX="115.0" layoutY="71.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Candidate Dashboard" textAlignment="CENTER" wrappingWidth="369.6000854492188">
       <font>
          <Font name="Arial Bold" size="34.0" />
@@ -34,5 +31,8 @@
          <Font name="Cambria" size="12.0" />
       </font>
    </Button>
-   <Label fx:id="outputLabelCandidateDashboard" layoutX="172.0" layoutY="107.0" prefHeight="42.0" prefWidth="267.0" />
+   <Label fx:id="outputLabelCandidateDashboard" layoutX="184.0" layoutY="107.0" prefHeight="42.0" prefWidth="267.0">
+      <font>
+         <Font size="14.0" />
+      </font></Label>
 </AnchorPane>

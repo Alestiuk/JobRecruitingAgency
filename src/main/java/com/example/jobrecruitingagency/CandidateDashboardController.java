@@ -17,6 +17,7 @@ public class CandidateDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        outputLabelCandidateDashboard.setText("Welcome to Candidate Dashboard");
     }
 
     @javafx.fxml.FXML
@@ -37,7 +38,15 @@ public class CandidateDashboardController
     }
 
     @javafx.fxml.FXML
-    public void trackApplicationsButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void trackApplicationsButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("TrackApplicationCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Track Applications");
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -49,7 +58,15 @@ public class CandidateDashboardController
     }
 
     @javafx.fxml.FXML
-    public void manageProfileButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void manageProfileButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("manageProfileCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Manage Profile");
+        stage.show();
     }
 
     @javafx.fxml.FXML

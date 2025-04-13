@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.TrackApplicationCandidateDashboard">
+   <children>
+      <Button layoutX="351.0" layoutY="81.0" mnemonicParsing="false" onAction="#showAllButtonCandidateTrackApplicationOA" text="Show All" />
+      <CheckBox fx:id="acceptedCheckBoxCandidateTrackApplication" layoutX="187.0" layoutY="86.0" mnemonicParsing="false" text="Accepted" />
+      <TableView fx:id="tableViewCandidateSearch" layoutX="14.0" layoutY="140.0" prefHeight="245.0" prefWidth="570.0">
+         <columns>
+            <TableColumn fx:id="jobTitleTCCandidateTrackApplication" prefWidth="235.20001220703125" text="Job Tile" />
+            <TableColumn fx:id="salaryTCCandidateTrackApplication" prefWidth="192.0" text="Salary" />
+            <TableColumn fx:id="statusTCCandidateTrackApplication" prefWidth="146.39996337890625" text="Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="270.0" layoutY="81.0" mnemonicParsing="false" onAction="#searchButtonCandidateTrackApplicationOA" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: green;" text="Search" textFill="WHITE" />
+      <Button layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#homeButtonCandidateTrackApplicationOA" style="-fx-background-color: blue;" text="Home" textFill="WHITE" />
+      <Text layoutX="196.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Application">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="425.0" layoutY="81.0" mnemonicParsing="false" onAction="#clearButtonTrackApplicationRecruiterDashboardOA" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: E50B0B;" text="Clear" textFill="WHITE" />
+   </children>
+</AnchorPane>

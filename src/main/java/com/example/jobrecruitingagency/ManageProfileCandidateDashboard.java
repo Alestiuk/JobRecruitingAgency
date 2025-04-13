@@ -42,6 +42,10 @@ public class ManageProfileCandidateDashboard
 
     @javafx.fxml.FXML
     public void initialize() {
+        sscCBManegProfileCandidate.getItems().addAll("1.00 - 2.00","2.00 - 3.00","3.00 - 4.00","4.00 - 5.00","5.00");
+        hscCBManegProfileCandidate.getItems().addAll("1.00 - 2.00","2.00 - 3.00","3.00 - 4.00","4.00 - 5.00","5.00");
+        undergraduateCBManegProfileCandidate.getItems().addAll("1.00 - 2.00","2.00 - 3.00","3.00 - 4.00","4.00");
+        graduateCBManegProfileCandidate.getItems().addAll("1.00 - 2.00","2.00 - 3.00","3.00 - 4.00","4.00");
     }
 
     @javafx.fxml.FXML

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -28,9 +29,12 @@ public class JobPostingController
     private TextField departmentTF;
     @javafx.fxml.FXML
     private TextArea qualificationTF;
+    @javafx.fxml.FXML
+    private ComboBox<String> jobTypeCBPostJob;
 
     @javafx.fxml.FXML
     public void initialize() {
+        jobTypeCBPostJob.getItems().addAll("Full Time","Part Time","Internship");
     }
 
     @javafx.fxml.FXML

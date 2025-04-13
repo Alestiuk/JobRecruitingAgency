@@ -46,6 +46,10 @@ public class CreateAccountRecruiterController
 
     @javafx.fxml.FXML
     public void initialize() {
+        numberOfEmployeesCB.getItems().addAll("1-50","51-100","101-500","501-1000","1001-5000","5000+");
+        industryTypeCB.getItems().addAll("Advertising and Marketing","Aeospace","Agriculture","Animal Husbandry",
+                "Architecture","Astronomy","Computer and Technology","Design","Education","Energy","Entertainment",
+                "Finance","Health","Hospitality","Human Resources","Information Technology","Legal","Logistics","Media","Mining","Oil and Gas","Real Estate","Science","Telecommunications","Transportation","Utilities","Other");
     }
 
     @javafx.fxml.FXML

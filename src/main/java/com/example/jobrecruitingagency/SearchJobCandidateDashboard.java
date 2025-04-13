@@ -28,11 +28,12 @@ public class SearchJobCandidateDashboard
     @javafx.fxml.FXML
     private TableColumn deadlineTCCandidateSearch;
     @javafx.fxml.FXML
-    private ComboBox jobTypeCBSearchCandidateDashboard;
+    private ComboBox<String> jobTypeCBSearchCandidateDashboard;
 
 
     @javafx.fxml.FXML
     public void initialize() {
+        jobTypeCBSearchCandidateDashboard.getItems().addAll("Full Time", "Part Time", "Internship");
     }
 
     @javafx.fxml.FXML

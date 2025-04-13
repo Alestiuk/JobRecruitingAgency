@@ -30,10 +30,12 @@ public class CreateAccountCandidateController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectSkillCBcreateAccountForCandidate.getItems().addAll("Accounting", "Admin Support", "Customer Service", "Finance", "Human Resources", "Information Technology", "Legal", "Marketing", "Sales", "Support");
     }
 
     @Deprecated
     public void createAccountOA(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

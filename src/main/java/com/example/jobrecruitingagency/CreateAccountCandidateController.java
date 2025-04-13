@@ -27,10 +27,14 @@ public class CreateAccountCandidateController
     private ComboBox<String> selectSkillCBcreateAccountForCandidate;
     @javafx.fxml.FXML
     private TextField mobileTFCreateAccountCandidate;
+    @javafx.fxml.FXML
+    private ComboBox<String> genderCBCandidate;
 
     @javafx.fxml.FXML
     public void initialize() {
         selectSkillCBcreateAccountForCandidate.getItems().addAll("Accounting", "Admin Support", "Customer Service", "Finance", "Human Resources", "Information Technology", "Legal", "Marketing", "Sales", "Support");
+        genderCBCandidate.getItems().addAll("Male", "Female");
+
     }
 
     @Deprecated

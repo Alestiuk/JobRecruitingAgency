@@ -27,6 +27,7 @@ public class FeedbackCandidateDashboard
 
     @javafx.fxml.FXML
     public void initialize() {
+        feedbackTypeCBCandidateDashboard.getItems().addAll("Suggestion", "Complaint","Comment");
     }
 
     @javafx.fxml.FXML

@@ -2,6 +2,7 @@ package com.example.jobrecruitingagency;
 
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -22,7 +23,7 @@ public class JobApplicationRecruiterDashboardController {
     @javafx.fxml.FXML
     private TableColumn hscTCJobApplicationRecruiter;
     @javafx.fxml.FXML
-    private ComboBox jobTypeCBJobApplicationRecruiter;
+    private ComboBox<String> jobTypeCBJobApplicationRecruiter;
     @javafx.fxml.FXML
     private TableColumn candidateNameTCJobApplicationRecruiter;
     @javafx.fxml.FXML
@@ -38,7 +39,11 @@ public class JobApplicationRecruiterDashboardController {
     @javafx.fxml.FXML
     private TableColumn skillTCJobApplicationRecruiter;
     @javafx.fxml.FXML
-    private TableView tableViewCandidateSearch;
+    private TableView tableViewCandidateSearchJobApplicationRecruiter;
+    @javafx.fxml.FXML
+    public void initialize() {
+        jobTypeCBJobApplicationRecruiter.getItems().addAll("Full Time","Part Time","Internship");
+    }
 
     @javafx.fxml.FXML
     public void homeButtonOAJobApplicationRecruiter(ActionEvent actionEvent) throws IOException {

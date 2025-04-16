@@ -77,5 +77,10 @@
          </font>
       </Label>
       <ComboBox fx:id="jobTypeCBPostJob" layoutX="368.0" layoutY="100.0" prefWidth="150.0" promptText="select type" />
+      <Label fx:id="outputLabel" layoutX="286.0" layoutY="410.0" prefHeight="30.0" prefWidth="249.0" textFill="#b90e0e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

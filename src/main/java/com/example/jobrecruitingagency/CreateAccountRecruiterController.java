@@ -84,6 +84,9 @@ public class CreateAccountRecruiterController
         }if (password.isEmpty()) {
             outputLabel.setText("Please enter password");
             return;
+        }if (!password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$")) {
+            outputLabel.setText("Password must be at least 8 characters and include uppercase, lowercase, digit, and special character");
+            return;
         }if (retypePassword.isEmpty()) {
             outputLabel.setText("Please Retype password");
             return;
@@ -140,17 +143,18 @@ public class CreateAccountRecruiterController
             return;
         }
         outputLabel.setText("Account created successfully!");
-        Integer numberOfEmployees = Integer.parseInt(numberOfEmployeesCB.getValue());
-        Integer contactPersonPhoneNumber = Integer.parseInt(contactPersonMobileTFCreateRecruiterAccount.getText());
-        Integer tradeLicenseNumber = Integer.parseInt(tradeLicenseNoTFCreateRecruiterAccount.getText());
-        Integer yearOfEstablishment = Integer.parseInt(yearOfEstablishTFCreateRecruiterAccount.getText());
+        //Integer numberOfEmployees = Integer.parseInt(numberOfEmployeesCB.getValue());
+        //Integer contactPersonPhoneNumber = Integer.parseInt(contactPersonMobileTFCreateRecruiterAccount.getText());
+        //Integer tradeLicenseNumber = Integer.parseInt(tradeLicenseNoTFCreateRecruiterAccount.getText());
+       // Integer yearOfEstablishment = Integer.parseInt(yearOfEstablishTFCreateRecruiterAccount.getText());
+       // String accountType ="Recruiter";
 
 
-        Recruiter recruiter = new Recruiter(userName,password,companyName,companyAddress,industryType,
-                website,contactPersonName,contactPersonEmail,
-                contactPersonDesignation,contactPersonPhoneNumber,tradeLicenseNumber,
-                yearOfEstablishment,numberOfEmployees);
-        recruiter.createRecruiter();
+        //Recruiter recruiter = new Recruiter(contactPersonPhoneNumber,password,accountType,userName,password,
+                //companyName,companyAddress,industryType,website,contactPersonName,contactPersonEmail,
+               // contactPersonDesignation,contactPersonPhoneNumber,tradeLicenseNumber,yearOfEstablishment,
+              //  numberOfEmployees);
+        //recruiter.createRecruiter();
         //if all pass, create account
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("RecruiterDashboard.fxml"));

@@ -27,9 +27,14 @@ public class MessageRecruiterDashboard
 
     @javafx.fxml.FXML
     public void sendButtonOARecruiterMessage(ActionEvent actionEvent) {
-        String message;
-        message = messageTextAreaRecruiterMessage.getText();
-        if (message.isEmpty()) {
+        String message= messageTextAreaRecruiterMessage.getText();
+        String phone = phoneNumberTFMessageRecruiter.getText();
+        if (phone.isEmpty()){
+            outputLableMessageRecruiter.setText("Enter a phone Number");
+        }if (!phone.matches("01\\d{9}")) {
+            outputLableMessageRecruiter.setText("Enter a valid Phone Number");
+            return;
+        }if (message.isEmpty()) {
             outputLableMessageRecruiter.setText("Empty Message");
         } else {
             outputLableMessageRecruiter.setText("Message Sent");

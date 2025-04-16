@@ -33,37 +33,39 @@ public class LogInController {
 
     @javafx.fxml.FXML
     public void logInOA(ActionEvent actionEvent) {
-        String phone = phoneNumberTF.getText().trim();
+        String phoneNumber = phoneNumberTF.getText();
         String password = passwordTF.getText();
         String accountType = accountTypeCBLogIn.getValue();
-        User user = new User(phone, password, accountType);
-        if (!user.isPhoneValid()) {
-            outputLabelLogIn.setText("Please enter a valid phone number");
+        String type =accountTypeCBLogIn.getValue();
+        //validation check
+        if (!phoneNumber.matches("01\\d{9}")) {
+            outputLabelLogIn.setText("Enter a valid Phone Number");
             return;
-        }
-        if (!user.isPasswordValid()) {
-            outputLabelLogIn.setText("Use a strong password like uppercase,\nlowercase, number and special character");
+        }if (password.isEmpty() ) {
+            outputLabelLogIn.setText("Please enter password");
             return;
-        }
-        if (!user.isAccountTypeValid()) {
-            outputLabelLogIn.setText("Please select a valid account type");
+        }if (!password.matches("\\d{8}")) {
+            outputLabelLogIn.setText("Invalid Password");
             return;
-        }
-        else {
+        }if (accountType == null) {
+            outputLabelLogIn.setText("Please select a account type");
+            return;
+        } else {
             outputLabelLogIn.setText("Login successful");
         }
+        //if validation pass
         try {
             Parent root = null ;
-            String fxml = accountType + "Dashboard" + ".fxml";
+            String fxml = type + "Dashboard" + ".fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource(fxml));
             root = fxmlLoader.load();
             Scene scene = new Scene(root) ;
             Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setTitle( accountType + " Dashboard");
+            stage.setTitle( type + " Dashboard");
             stage.show();
         } catch (Exception e) {
-            outputLabelLogIn.setText("Scene for " + accountType + "' not found.");
+            outputLabelLogIn.setText("Scene for " +type + "' not found.");
         }
     }
 

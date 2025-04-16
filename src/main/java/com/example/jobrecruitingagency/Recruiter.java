@@ -1,16 +1,14 @@
 package com.example.jobrecruitingagency;
 
-public class Recruiter {
+public class Recruiter extends User {
     String userName, password,companyName,companyAddress,industryType,website,contactPersonName,
             contactPersonEmail,contactPersonDesignation;
     Integer contactPersonPhoneNumber,tradeLicenseNumber,yearOfEstablishment,numberOfEmployees;
 
-    public Recruiter(String userName, String password, String companyName, String companyAddress, String industryType,
-                     String website, String contactPersonName, String contactPersonEmail,
-                     String contactPersonDesignation, Integer contactPersonPhoneNumber, Integer tradeLicenseNumber,
-                     Integer yearOfEstablishment, Integer numberOfEmployees) {
+    public Recruiter(Integer phoneNumber, String password, String accountType, String userName, String password1, String companyName, String companyAddress, String industryType, String website, String contactPersonName, String contactPersonEmail, String contactPersonDesignation, Integer contactPersonPhoneNumber, Integer tradeLicenseNumber, Integer yearOfEstablishment, Integer numberOfEmployees) {
+        super(phoneNumber, password, accountType);
         this.userName = userName;
-        this.password = password;
+        this.password = password1;
         this.companyName = companyName;
         this.companyAddress = companyAddress;
         this.industryType = industryType;
@@ -32,10 +30,12 @@ public class Recruiter {
         this.userName = userName;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
 
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }

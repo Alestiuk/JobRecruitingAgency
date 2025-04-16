@@ -79,6 +79,9 @@ public class CreateAccountCandidateController
         }if (password.isEmpty()) {
             outputLabel.setText("Please enter your password");
             return;
+        }if (!password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$")) {
+            outputLabel.setText("Password must be at least 8 characters and include uppercase, lowercase, digit, and special character");
+            return;
         }if (retypePassword.isEmpty()) {
              outputLabel.setText("Please Retype password");
              return;

@@ -1,17 +1,17 @@
 package com.example.jobrecruitingagency;
 
 public class User {
-    private String phoneNumber;
+    private Integer phoneNumber;
     private String password;
     private String accountType;
 
-    public User(String phoneNumber, String password, String accountType) {
+    public User(Integer phoneNumber, String password, String accountType) {
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.accountType = accountType;
     }
-    public boolean isPhoneValid(){
-        return phoneNumber!=null && phoneNumber.matches("01\\d{9}");
+    public boolean isPhoneValid() {
+        return phoneNumber != null && String.valueOf(phoneNumber).matches("1\\d{9}");
     }
     public  boolean isPasswordValid(){
         return password!=null && password.matches(("^[0-9];{8}"));
@@ -21,9 +21,11 @@ public class User {
         return accountType!=null;
     }
 
-    public String getPhoneNumber() {return phoneNumber;}
+    public Integer getPhoneNumber() {
+        return phoneNumber;
+    }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(Integer phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -46,9 +48,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "phoneNumber='" + phoneNumber + '\'' +
+                "phoneNumber=" + phoneNumber +
                 ", password='" + password + '\'' +
                 ", accountType='" + accountType + '\'' +
                 '}';
     }
+
+
 }

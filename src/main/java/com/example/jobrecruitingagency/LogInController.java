@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LogInController
-{
+public class LogInController {
     @javafx.fxml.FXML
     private PasswordField passwordTF;
     @javafx.fxml.FXML
@@ -40,12 +39,31 @@ public class LogInController
         User user = new User(phone, password, accountType);
         if (!user.isPhoneValid()) {
             outputLabelLogIn.setText("Please enter a valid phone number");
-        } else if (!user.isPasswordValid()) {
+            return;
+        }
+        if (!user.isPasswordValid()) {
             outputLabelLogIn.setText("Use a strong password like uppercase,\nlowercase, number and special character");
-        } else if (!user.isAccountTypeValid()) {
+            return;
+        }
+        if (!user.isAccountTypeValid()) {
             outputLabelLogIn.setText("Please select a valid account type");
-        } else {
+            return;
+        }
+        else {
             outputLabelLogIn.setText("Login successful");
+        }
+        try {
+            Parent root = null ;
+            String fxml = accountType + "Dashboard" + ".fxml";
+            FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource(fxml));
+            root = fxmlLoader.load();
+            Scene scene = new Scene(root) ;
+            Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle( accountType + " Dashboard");
+            stage.show();
+        } catch (Exception e) {
+            outputLabelLogIn.setText("Scene for " + accountType + "' not found.");
         }
     }
 

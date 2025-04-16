@@ -11,7 +11,7 @@
    <children>
       <Text fill="WHITE" layoutX="14.0" layoutY="139.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="JOB RECRUITING AGENCY" wrappingWidth="328.53660583496094">
          <font>
-            <Font name="SansSerif Regular" size="51.0" />
+            <Font name="Arial" size="51.0" />
          </font>
       </Text>
       <Button layoutX="549.0" layoutY="37.0" mnemonicParsing="false" onAction="#supportButtonOAmainDashboard" text="SUPPORT">

@@ -50,11 +50,27 @@ public class CandidateDashboardController
     }
 
     @javafx.fxml.FXML
-    public void interviewInvitationButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void interviewInvitationButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("InterviewInvitationCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Interview Invitation");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void jobOfferButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void jobOfferButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("JobOfferCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Job Offer");
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -69,7 +85,7 @@ public class CandidateDashboardController
         stage.show();
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void interviewPreparationButtonOAcandidateDashboard(ActionEvent actionEvent) {
     }
 
@@ -95,5 +111,9 @@ public class CandidateDashboardController
         stage.setScene(scene);
         stage.setTitle("Main Dashboard");
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void inboxButtonOAcandidateDashboard(ActionEvent actionEvent) {
     }
 }

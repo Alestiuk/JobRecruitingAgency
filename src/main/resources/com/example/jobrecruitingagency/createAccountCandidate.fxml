@@ -45,5 +45,10 @@
       <TextField fx:id="retypePasswordTFCreateAccountCandidate" layoutX="405.0" layoutY="206.0" promptText="Reype Password" />
       <Button layoutX="252.0" layoutY="256.0" mnemonicParsing="false" onAction="#createAccountForCandidateOA" style="-fx-background-color: green;" text="Create Account" textFill="WHITE" />
       <ComboBox fx:id="genderCBCandidate" layoutX="380.0" layoutY="51.0" prefWidth="150.0" promptText="Select  gender" />
+      <Label fx:id="outputLabel" layoutX="196.0" layoutY="21.0" prefHeight="26.0" prefWidth="322.0" textFill="#c71313">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

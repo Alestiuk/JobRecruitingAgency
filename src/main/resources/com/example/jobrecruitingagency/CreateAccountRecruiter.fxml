@@ -54,5 +54,10 @@
       <TextField fx:id="contactPersonMobileTFCreateRecruiterAccount" layoutX="473.0" layoutY="458.0" promptText="Contact Person's Mobile" />
       <Button layoutX="240.0" layoutY="509.0" mnemonicParsing="false" onAction="#createAccountOARecruiter" prefHeight="30.0" prefWidth="167.0" style="-fx-background-color: green;" text="Create Account" textFill="WHITE" />
       <ComboBox fx:id="numberOfEmployeesCB" layoutX="150.0" layoutY="173.0" prefHeight="26.0" prefWidth="174.0" promptText=" Number of Employees" />
+      <Label fx:id="outputLabel" layoutX="236.0" layoutY="26.0" prefHeight="26.0" prefWidth="378.0" textFill="#c71313">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

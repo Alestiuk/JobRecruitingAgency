@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.CandidateDashboardController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.CandidateDashboardController">
    <Text fill="WHITE" layoutX="115.0" layoutY="71.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Candidate Dashboard" textAlignment="CENTER" wrappingWidth="369.6000854492188">
       <font>
          <Font name="Arial Bold" size="34.0" />
@@ -21,7 +24,7 @@
    <ButtonBar layoutX="13.0" layoutY="256.0" prefHeight="40.0" prefWidth="574.0">
       <buttons>
          <Button mnemonicParsing="false" onAction="#interviewInvitationButtonOAcandidateDashboard" prefHeight="38.0" style="-fx-border-color: black;" text="Interview Invitation" />
-         <Button mnemonicParsing="false" onAction="#interviewPreparationButtonOAcandidateDashboard" prefHeight="48.0" prefWidth="208.0" style="-fx-border-color: black;" text="Interview Preparation" />
+         <Button mnemonicParsing="false" onAction="#inboxButtonOAcandidateDashboard" prefHeight="48.0" prefWidth="208.0" style="-fx-border-color: black;" text="Inbox" />
          <Button mnemonicParsing="false" onAction="#jobOfferButtonOAcandidateDashboard" prefHeight="37.0" prefWidth="194.0" style="-fx-border-color: black;" text="Job Offer" />
       </buttons>
    </ButtonBar>

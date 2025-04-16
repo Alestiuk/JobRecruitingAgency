@@ -14,15 +14,14 @@ public class User {
         return phoneNumber!=null && phoneNumber.matches("01\\d{9}");
     }
     public  boolean isPasswordValid(){
-        return password!=null && password.matches(("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"));
+        return password!=null && password.matches(("^[0-9];{8}"));
     }
+
     public boolean isAccountTypeValid(){
         return accountType!=null;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+    public String getPhoneNumber() {return phoneNumber;}
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;

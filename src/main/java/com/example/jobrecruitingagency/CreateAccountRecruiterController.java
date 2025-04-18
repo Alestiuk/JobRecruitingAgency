@@ -64,18 +64,18 @@ public class CreateAccountRecruiterController
         String userName = userNameTFCreateRecruiterAccount.getText();
         String  password = passwordTFCreateRecruiterAccount.getText();
         String companyName = companyNameTFCreateRecruiterAccount.getText();
-        String numberOfEmployeesint = numberOfEmployeesCB.getValue();
+        String numberOfEmployees= numberOfEmployeesCB.getValue();
         String companyAddress = companyAddressTFCreateRecruiterAccount.getText();
         String industryType = industryTypeCB.getValue();
         String website = websiteLinkTFCreateRecruiterAccount.getText();
         String contactPersonName = contactPersonNameTFCreateRecruiterAccount.getText();
         String contactPersonEmail = contactPersonEmailTFCreateRecruiterAccount.getText();
         String contactPersonDesignation = contactPersonDesignationTFCreateRecruiterAccount.getText();
-        String contactPersonPhoneNumberint = contactPersonMobileTFCreateRecruiterAccount.getText();
-        String tradeLicenseNumberint = tradeLicenseNoTFCreateRecruiterAccount.getText();
-        String yearOfEstablishmentint = yearOfEstablishTFCreateRecruiterAccount.getText();
+        String contactPersonPhoneNumber = contactPersonMobileTFCreateRecruiterAccount.getText();
+        String tradeLicenseNumber = tradeLicenseNoTFCreateRecruiterAccount.getText();
+        String yearOfEstablishment = yearOfEstablishTFCreateRecruiterAccount.getText();
         String retypePassword = retypePasswordTFCreateRecruiterAccount.getText();
-
+        String userType = "Recruiter";
 
         //Validation Checker
         if (userName.isEmpty()) {
@@ -96,13 +96,13 @@ public class CreateAccountRecruiterController
         }if (companyName.isEmpty()) {
             outputLabel.setText("Please enter company name");
             return;
-        }if (yearOfEstablishmentint == null) {
+        }if (yearOfEstablishment == null) {
             outputLabel.setText("Please enter year of establishment");
             return;
-        }if (!yearOfEstablishmentint.matches("\\d{4}")) {
+        }if (!yearOfEstablishment.matches("\\d{4}")) {
             outputLabel.setText("Enter a valid 4-digit year");
             return;
-        }if (numberOfEmployeesint == null || numberOfEmployeesint.isEmpty()) {
+        }if (numberOfEmployees == null || numberOfEmployees.isEmpty()) {
             outputLabel.setText("Please select number of employees");
             return;
         }if (companyAddress.isEmpty()) {
@@ -111,10 +111,10 @@ public class CreateAccountRecruiterController
         }if (industryType == null || industryType.isEmpty()) {
             outputLabel.setText("Please select industry type");
             return;
-        }if (tradeLicenseNumberint.isEmpty()) {
+        }if (tradeLicenseNumber.isEmpty()) {
             outputLabel.setText("Please enter trade license number");
             return;
-        }if (!tradeLicenseNumberint.matches("\\d+")) {
+        }if (!tradeLicenseNumber.matches("\\d+")) {
             outputLabel.setText("Trade license number must be numeric");
             return;
         }if (website.isEmpty()) {
@@ -135,27 +135,19 @@ public class CreateAccountRecruiterController
         }if (contactPersonDesignation.isEmpty()) {
             outputLabel.setText("Please enter contact person designation");
             return;
-        }if (contactPersonPhoneNumberint.isEmpty()) {
+        }if (contactPersonPhoneNumber.isEmpty()) {
             outputLabel.setText("Please enter contact person phone number");
             return;
-        }if (!contactPersonPhoneNumberint.matches("01\\d{9}")) {
+        }if (!contactPersonPhoneNumber.matches("01\\d{9}")) {
             outputLabel.setText("Enter a valid Phone Number");
             return;
         }
         outputLabel.setText("Account created successfully!");
-        //Integer numberOfEmployees = Integer.parseInt(numberOfEmployeesCB.getValue());
-        //Integer contactPersonPhoneNumber = Integer.parseInt(contactPersonMobileTFCreateRecruiterAccount.getText());
-        //Integer tradeLicenseNumber = Integer.parseInt(tradeLicenseNoTFCreateRecruiterAccount.getText());
-       // Integer yearOfEstablishment = Integer.parseInt(yearOfEstablishTFCreateRecruiterAccount.getText());
-       // String accountType ="Recruiter";
 
-
-        //Recruiter recruiter = new Recruiter(contactPersonPhoneNumber,password,accountType,userName,password,
-                //companyName,companyAddress,industryType,website,contactPersonName,contactPersonEmail,
-               // contactPersonDesignation,contactPersonPhoneNumber,tradeLicenseNumber,yearOfEstablishment,
-              //  numberOfEmployees);
-        //recruiter.createRecruiter();
-        //if all pass, create account
+        Recruiter recruiter = new Recruiter(userName,password,companyName,companyAddress,industryType,website
+                ,contactPersonName,contactPersonPhoneNumber,contactPersonEmail,contactPersonDesignation,userType,tradeLicenseNumber,yearOfEstablishment,numberOfEmployees);
+         recruiter.createRecruiter();
+         //if all pass, create account
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("RecruiterDashboard.fxml"));
             Parent root = fxmlLoader.load();

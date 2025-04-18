@@ -1,22 +1,25 @@
 package com.example.jobrecruitingagency;
 
-public class Recruiter extends User {
-    String userName, password,companyName,companyAddress,industryType,website,contactPersonName,
-            contactPersonEmail,contactPersonDesignation;
-    Integer contactPersonPhoneNumber,tradeLicenseNumber,yearOfEstablishment,numberOfEmployees;
+import java.io.IOException;
+import java.io.Serializable;
 
-    public Recruiter(Integer phoneNumber, String password, String accountType, String userName, String password1, String companyName, String companyAddress, String industryType, String website, String contactPersonName, String contactPersonEmail, String contactPersonDesignation, Integer contactPersonPhoneNumber, Integer tradeLicenseNumber, Integer yearOfEstablishment, Integer numberOfEmployees) {
-        super(phoneNumber, password, accountType);
+public class Recruiter  implements Serializable {
+    String userName, password,companyName,companyAddress,industryType,website,contactPersonName,contactPersonPhoneNumber,
+            contactPersonEmail,contactPersonDesignation,userType,tradeLicenseNumber,yearOfEstablishment,
+            numberOfEmployees;
+
+    public Recruiter(String userName, String password, String companyName, String companyAddress, String industryType, String website, String contactPersonName, String contactPersonPhoneNumber, String contactPersonEmail, String contactPersonDesignation, String userType, String tradeLicenseNumber, String yearOfEstablishment, String numberOfEmployees) {
         this.userName = userName;
-        this.password = password1;
+        this.password = password;
         this.companyName = companyName;
         this.companyAddress = companyAddress;
         this.industryType = industryType;
         this.website = website;
         this.contactPersonName = contactPersonName;
+        this.contactPersonPhoneNumber = contactPersonPhoneNumber;
         this.contactPersonEmail = contactPersonEmail;
         this.contactPersonDesignation = contactPersonDesignation;
-        this.contactPersonPhoneNumber = contactPersonPhoneNumber;
+        this.userType = userType;
         this.tradeLicenseNumber = tradeLicenseNumber;
         this.yearOfEstablishment = yearOfEstablishment;
         this.numberOfEmployees = numberOfEmployees;
@@ -30,12 +33,10 @@ public class Recruiter extends User {
         this.userName = userName;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
 
-    @Override
     public void setPassword(String password) {
         this.password = password;
     }
@@ -80,6 +81,14 @@ public class Recruiter extends User {
         this.contactPersonName = contactPersonName;
     }
 
+    public String getContactPersonPhoneNumber() {
+        return contactPersonPhoneNumber;
+    }
+
+    public void setContactPersonPhoneNumber(String contactPersonPhoneNumber) {
+        this.contactPersonPhoneNumber = contactPersonPhoneNumber;
+    }
+
     public String getContactPersonEmail() {
         return contactPersonEmail;
     }
@@ -96,35 +105,35 @@ public class Recruiter extends User {
         this.contactPersonDesignation = contactPersonDesignation;
     }
 
-    public Integer getContactPersonPhoneNumber() {
-        return contactPersonPhoneNumber;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setContactPersonPhoneNumber(Integer contactPersonPhoneNumber) {
-        this.contactPersonPhoneNumber = contactPersonPhoneNumber;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
-    public Integer getTradeLicenseNumber() {
+    public String getTradeLicenseNumber() {
         return tradeLicenseNumber;
     }
 
-    public void setTradeLicenseNumber(Integer tradeLicenseNumber) {
+    public void setTradeLicenseNumber(String tradeLicenseNumber) {
         this.tradeLicenseNumber = tradeLicenseNumber;
     }
 
-    public Integer getYearOfEstablishment() {
+    public String getYearOfEstablishment() {
         return yearOfEstablishment;
     }
 
-    public void setYearOfEstablishment(Integer yearOfEstablishment) {
+    public void setYearOfEstablishment(String yearOfEstablishment) {
         this.yearOfEstablishment = yearOfEstablishment;
     }
 
-    public Integer getNumberOfEmployees() {
+    public String getNumberOfEmployees() {
         return numberOfEmployees;
     }
 
-    public void setNumberOfEmployees(Integer numberOfEmployees) {
+    public void setNumberOfEmployees(String numberOfEmployees) {
         this.numberOfEmployees = numberOfEmployees;
     }
 
@@ -138,15 +147,22 @@ public class Recruiter extends User {
                 ", industryType='" + industryType + '\'' +
                 ", website='" + website + '\'' +
                 ", contactPersonName='" + contactPersonName + '\'' +
+                ", contactPersonPhoneNumber='" + contactPersonPhoneNumber + '\'' +
                 ", contactPersonEmail='" + contactPersonEmail + '\'' +
                 ", contactPersonDesignation='" + contactPersonDesignation + '\'' +
-                ", contactPersonPhoneNumber=" + contactPersonPhoneNumber +
-                ", tradeLicenseNumber=" + tradeLicenseNumber +
-                ", yearOfEstablishment=" + yearOfEstablishment +
-                ", numberOfEmployees=" + numberOfEmployees +
+                ", userType='" + userType + '\'' +
+                ", tradeLicenseNumber='" + tradeLicenseNumber + '\'' +
+                ", yearOfEstablishment='" + yearOfEstablishment + '\'' +
+                ", numberOfEmployees='" + numberOfEmployees + '\'' +
                 '}';
     }
 
     public void createRecruiter() {
+        try {
+            FileHelper.saveToFile("recruiters.dat", this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }

@@ -37,7 +37,7 @@
       <ComboBox fx:id="industryTypeCB" layoutX="125.0" layoutY="306.0" prefWidth="150.0" promptText="Industry Type" />
       <Label layoutX="29.0" layoutY="351.0" text="Business/ Trade License No" />
       <TextField fx:id="tradeLicenseNoTFCreateRecruiterAccount" layoutX="176.0" layoutY="346.0" prefHeight="26.0" prefWidth="167.0" promptText="Business / Trade Licience No" />
-      <Label layoutX="351.0" layoutY="351.0" text="Website(if any)" />
+      <Label layoutX="385.0" layoutY="351.0" text="Website" />
       <TextField fx:id="websiteLinkTFCreateRecruiterAccount" layoutX="436.0" layoutY="346.0" prefHeight="26.0" prefWidth="186.0" promptText="Website Link" />
       <Text fill="#004dff" layoutX="29.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provide Contact Person Information" wrappingWidth="250.1366424560547">
          <font>

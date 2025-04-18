@@ -1,19 +1,19 @@
 package com.example.jobrecruitingagency;
 
-public class Candidate {
-    String fullName, gender,skill, email,  password;
-    Integer phoneNumber;
+import java.io.IOException;
+import java.io.Serializable;
 
-    public Candidate(String fullName, String gender, String skill, String email, String password, Integer phoneNumber) {
+public class Candidate implements Serializable {
+    String fullName, gender,skill, email,password,userType,phoneNumber;
+
+    public Candidate(String fullName, String gender, String skill, String email, String password, String userType, String phoneNumber) {
         this.fullName = fullName;
         this.gender = gender;
         this.skill = skill;
         this.email = email;
         this.password = password;
+        this.userType = userType;
         this.phoneNumber = phoneNumber;
-    }
-
-    public Candidate(String fullName, String gender, String skill, String email, Integer phoneNumber, String password) {
     }
 
     public String getFullName() {
@@ -56,11 +56,19 @@ public class Candidate {
         this.password = password;
     }
 
-    public Integer getPhoneNumber() {
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -72,10 +80,17 @@ public class Candidate {
                 ", skill='" + skill + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", userType='" + userType + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 
     public void createCandidate() {
+        try {
+            FileHelper.saveToFile("candidates.dat", this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        };
     }
+
 }

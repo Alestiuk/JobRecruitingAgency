@@ -17,11 +17,12 @@ public class RecruiterDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
-        outputLabelOfRecruiterDashboard.setText(" WELCOME TO Recruiter Dashboard");
+
     }
 
     @javafx.fxml.FXML
     public void feedbackImprovementButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
+
 
     }
 
@@ -38,11 +39,11 @@ public class RecruiterDashboardController
     }
 
     @javafx.fxml.FXML
-    public void logOutButtonOARecruiterDashboard(ActionEvent actionEvent) throws IOException {
-        Parent root = null ;
+    public void logOutButtonOARecruiterDashboard(ActionEvent actionEvent) throws IOException {// Clear the logged-in recruiter
+        Parent root = null;
         FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("MainDashboard.fxml"));
         root = fxmlLoader.load();
-        Scene scene = new Scene(root) ;
+        Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Main Dashboard");

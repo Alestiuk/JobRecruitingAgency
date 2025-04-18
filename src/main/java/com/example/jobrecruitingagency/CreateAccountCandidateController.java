@@ -49,10 +49,10 @@ public class CreateAccountCandidateController
         String gender = genderCBCandidate.getValue();
         String skill = selectSkillCBcreateAccountForCandidate.getValue();
         String email = emailTFCreateAccountCandidate.getText();
-        String phoneNumberint = mobileTFCreateAccountCandidate.getText();
+        String phoneNumber = mobileTFCreateAccountCandidate.getText();
         String password = passwordTFCreateAccountCandidate.getText();
         String retypePassword = retypePasswordTFCreateAccountCandidate.getText();
-
+        String userType = "Candidate";
         //Validation Checker
         if (fullName.isEmpty()) {
             outputLabel.setText("Please enter your full name");
@@ -70,10 +70,10 @@ public class CreateAccountCandidateController
         if (!email.matches(".*@.*\\.com$")) {
             outputLabel.setText("Enter a Valid Email");
             return;
-        }if (phoneNumberint.isEmpty()) {
+        }if (phoneNumber.isEmpty()) {
              outputLabel.setText("Please enter your phone number");
              return;
-        }if (!phoneNumberint.matches("01\\d{9}")) {
+        }if (!phoneNumber.matches("01\\d{9}")) {
              outputLabel.setText("Enter a valid Phone Number");
              return;
         }if (password.isEmpty()) {
@@ -92,8 +92,8 @@ public class CreateAccountCandidateController
         outputLabel.setText("Account created successfully!");
 
         // If all validation passed, create account
-        Integer phoneNumber = Integer.parseInt(mobileTFCreateAccountCandidate.getText());
-        Candidate candidate = new Candidate(fullName,gender,skill,email,password,phoneNumber);
+
+        Candidate candidate = new Candidate(fullName,gender,skill,email,password,userType,phoneNumber);
         candidate.createCandidate();
 
 

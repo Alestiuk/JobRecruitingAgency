@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LogInController {
     @javafx.fxml.FXML
@@ -44,15 +45,34 @@ public class LogInController {
         }if (password.isEmpty() ) {
             outputLabelLogIn.setText("Please enter password");
             return;
-        }if (!password.matches("\\d{8}")) {
-            outputLabelLogIn.setText("Invalid Password");
-            return;
         }if (accountType == null) {
             outputLabelLogIn.setText("Please select a account type");
             return;
         } else {
             outputLabelLogIn.setText("Login successful");
         }
+        boolean matched = false;
+
+        if (accountType.equals("Candidate")) {
+            ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.dat");
+            for (Candidate c : candidates) {
+                if (c.getPhoneNumber().equals(phoneNumber) && c.getPassword().equals(password)) {
+                    matched = true;
+                    break;
+                }
+            }
+        } else if (accountType.equals("Recruiter")) {
+            ArrayList<Recruiter> recruiters = FileHelper.loadFromFile("recruiters.dat");
+            for (Recruiter r : recruiters) {
+                if (r.getContactPersonPhoneNumber().equals(phoneNumber) && r.getPassword().equals(password)) {
+                    matched = true;
+                    break;
+                }
+            }
+        }
+
+        if (matched) {
+            outputLabelLogIn.setText("Login successful!");
         //if validation pass
         try {
             Parent root = null ;
@@ -69,6 +89,9 @@ public class LogInController {
         }
     }
 
+
+}
+
     @javafx.fxml.FXML
     public void backButtonOALogIn(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
@@ -79,6 +102,5 @@ public class LogInController {
         stage.setScene(scene);
         stage.setTitle("Main Dashboard");
         stage.show();
-
     }
-}
+    }

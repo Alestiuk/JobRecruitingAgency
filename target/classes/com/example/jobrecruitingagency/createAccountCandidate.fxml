@@ -50,5 +50,6 @@
             <Font size="13.0" />
          </font>
       </Label>
+      <Button layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
    </children>
 </AnchorPane>

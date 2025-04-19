@@ -24,7 +24,7 @@
          </font>
       </Text>
       <Button layoutX="545.0" layoutY="13.0" mnemonicParsing="false" onAction="#homeButtonOA" style="-fx-background-color: blue;" text="HOME" textFill="WHITE" />
-      <Button layoutX="306.0" layoutY="99.0" mnemonicParsing="false" onAction="#rejectButtonOA" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #ce1919;" text="Reject" textFill="WHITE" />
+      <Button layoutX="306.0" layoutY="99.0" mnemonicParsing="false" onAction="#rejectButtonOA" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #ce1919;" text="Decline" textFill="WHITE" />
       <Button layoutX="191.0" layoutY="99.0" mnemonicParsing="false" onAction="#accecptButtonOA" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: green;" text="Accecpt" textFill="WHITE" />
       <Label fx:id="outputLableJobOffer" layoutX="242.0" layoutY="70.0" prefHeight="18.0" prefWidth="169.0" textFill="#c41111">
          <font>

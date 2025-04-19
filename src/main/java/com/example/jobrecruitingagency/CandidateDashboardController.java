@@ -114,6 +114,17 @@ public class CandidateDashboardController
     }
 
     @javafx.fxml.FXML
-    public void inboxButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void inboxButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("inboxCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Inbox");
+        stage.show();
+    }
+    public void setCandidate(Candidate candidate) {
+        outputLabelCandidateDashboard.setText("Welcome " + "Mr./Ms."+ " " + candidate.getFullName());
     }
 }

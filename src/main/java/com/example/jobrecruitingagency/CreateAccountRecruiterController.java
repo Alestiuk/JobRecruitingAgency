@@ -160,4 +160,16 @@ public class CreateAccountRecruiterController
             outputLabel.setText("Error");
         }
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOA(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("SelectPostingFrLogIn.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Select User Type");
+        stage.show();
+    }
 }

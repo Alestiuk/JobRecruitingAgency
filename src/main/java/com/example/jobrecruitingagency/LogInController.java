@@ -53,41 +53,47 @@ public class LogInController {
         }
         boolean matched = false;
 
-        if (accountType.equals("Candidate")) {
-            ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.dat");
-            for (Candidate c : candidates) {
-                if (c.getPhoneNumber().equals(phoneNumber) && c.getPassword().equals(password)) {
-                    matched = true;
-                    break;
-                }
-            }
-        } else if (accountType.equals("Recruiter")) {
-            ArrayList<Recruiter> recruiters = FileHelper.loadFromFile("recruiters.dat");
-            for (Recruiter r : recruiters) {
-                if (r.getContactPersonPhoneNumber().equals(phoneNumber) && r.getPassword().equals(password)) {
-                    matched = true;
-                    break;
-                }
-            }
-        }
-
-        if (matched) {
-            outputLabelLogIn.setText("Login successful!");
-        //if validation pass
         try {
-            Parent root = null ;
-            String fxml = type + "Dashboard" + ".fxml";
-            FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource(fxml));
-            root = fxmlLoader.load();
-            Scene scene = new Scene(root) ;
-            Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setTitle( type + " Dashboard");
-            stage.show();
-        } catch (Exception e) {
-            outputLabelLogIn.setText("Scene for " +type + "' not found.");
+            if (accountType.equals("Candidate")) {
+                ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.dat");
+                for (Candidate c : candidates) {
+                    if (c.getPhoneNumber().equals(phoneNumber) && c.getPassword().equals(password)) {
+                        FXMLLoader loader = new FXMLLoader(AgencyApplication.class.getResource("CandidateDashboard.fxml"));
+                        Parent root = loader.load();
+
+                        CandidateDashboardController controller = loader.getController();
+                        controller.setCandidate(c);
+
+                        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+                        stage.setScene(new Scene(root));
+                        stage.setTitle("Candidate Dashboard");
+                        stage.show();
+                        return;
+                    }
+                }
+            } else if (accountType.equals("Recruiter")) {
+                ArrayList<Recruiter> recruiters = FileHelper.loadFromFile("recruiters.dat");
+                for (Recruiter r : recruiters) {
+                    if (r.getContactPersonPhoneNumber().equals(phoneNumber) && r.getPassword().equals(password)) {
+                        FXMLLoader loader = new FXMLLoader(AgencyApplication.class.getResource("RecruiterDashboard.fxml"));
+                        Parent root = loader.load();
+
+                        RecruiterDashboardController controller = loader.getController();
+                        controller.setRecruiter(r);
+
+                        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+                        stage.setScene(new Scene(root));
+                        stage.setTitle("Recruiter Dashboard");
+                        stage.show();
+                        return;
+                    }
+                }
+            }
+
+            outputLabelLogIn.setText("Phone or password incorrect!");
+        } catch (IOException e) {
+            outputLabelLogIn.setText("Error loading dashboard.");
         }
-    }
 
 
 }

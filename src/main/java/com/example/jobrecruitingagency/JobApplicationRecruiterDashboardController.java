@@ -38,8 +38,9 @@ public class JobApplicationRecruiterDashboardController {
     private TableColumn undergraduateTCJobApplicationRecruiter;
     @javafx.fxml.FXML
     private TableColumn skillTCJobApplicationRecruiter;
-    @javafx.fxml.FXML
-    private TableView tableViewCandidateSearchJobApplicationRecruiter;
+    @FXML
+    private TableView tableViewCandidateSearch;
+
     @javafx.fxml.FXML
     public void initialize() {
         jobTypeCBJobApplicationRecruiter.getItems().addAll("Full Time","Part Time","Internship");
@@ -63,5 +64,13 @@ public class JobApplicationRecruiterDashboardController {
 
     @javafx.fxml.FXML
     public void clearButtonJobApplicationRecruiterDashboardOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void rejectButtonOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void approveButtonOA(ActionEvent actionEvent) {
     }
 }

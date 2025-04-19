@@ -42,4 +42,12 @@ public class InterviewInvitationCandidateDashboard
         stage.setTitle("Candidate Dashboard");
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void declineButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void accecptButtonOA(ActionEvent actionEvent) {
+    }
 }

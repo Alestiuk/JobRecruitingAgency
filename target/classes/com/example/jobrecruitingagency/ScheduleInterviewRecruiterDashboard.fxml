@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.ScheduleInterviewRecruiterDashboard">
+   <children>
+      <Text layoutX="173.0" layoutY="33.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="2.0" text="Schedule Interview">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableViewScheduleInterview" layoutY="182.0" prefHeight="217.0" prefWidth="634.0">
+         <columns>
+            <TableColumn fx:id="candidateNameTCScheduleInterviewRecruiter" prefWidth="145.60003662109375" text="Candidate Name" />
+            <TableColumn fx:id="sscTCScheduleInterviewRecruiter" minWidth="5.5999755859375" prefWidth="59.20001220703125" text="SSC" />
+            <TableColumn fx:id="hscTCScheduleInterviewRecruiter" prefWidth="57.5999755859375" text="HSC" />
+            <TableColumn fx:id="undergraduateTCScheduleInterviewRecruiter" prefWidth="94.4000244140625" text="UnderGraduate" />
+            <TableColumn fx:id="graduateTCScheduleInterviewRecruiter" prefWidth="63.99993896484375" text="Graduate" />
+            <TableColumn fx:id="experienceTCScheduleInterviewRecruiter" prefWidth="74.4000244140625" text="Experience" />
+            <TableColumn fx:id="skillTCScheduleInterviewRecruiter" prefWidth="70.39999389648438" text="Skill" />
+            <TableColumn fx:id="statusTCScheduleInterviewRecruiter" prefWidth="64.80002441406248" text="Status" />
+         </columns>
+      </TableView>
+      <Label fx:id="outputLabel" layoutX="2.0" layoutY="54.0" prefHeight="31.0" prefWidth="160.0" />
+      <Label layoutX="173.0" layoutY="62.0" text="Interview Date:">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="93.0" text="Interview Time:">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="132.0" text="Interview Location:">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="interviewDatePicker" layoutX="266.0" layoutY="57.0" />
+      <TextField fx:id="interviewTimeTF" layoutX="266.0" layoutY="88.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="InterviewLocatonTF" layoutX="266.0" layoutY="121.0" prefHeight="38.0" prefWidth="175.0" />
+      <Button layoutX="480.0" layoutY="88.0" mnemonicParsing="false" onAction="#sendButtonOA" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: green;" text="Send" textFill="WHITE" />
+      <Button layoutX="579.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" style="-fx-background-color: blue;" text="Back" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.ManageJobRecruiterDashboard">
+   <children>
+      <Text layoutX="215.0" layoutY="39.0" stroke="WHITE" strokeType="OUTSIDE" text="Manage Jobs">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Text>
+      <TableView fx:id="jobTableView" layoutY="150.0" prefHeight="249.0" prefWidth="632.0">
+        <columns>
+          <TableColumn fx:id="jobTitleTC" prefWidth="124.0" text="Job Title" />
+          <TableColumn fx:id="departmentTC" prefWidth="84.0" text="Department" />
+            <TableColumn fx:id="typeTC" prefWidth="101.60003662109375" text="Job Type" />
+            <TableColumn fx:id="salaryTC" prefWidth="108.00006103515625" text="Salary" />
+            <TableColumn fx:id="deadlineTC" prefWidth="132.0" text="Deadline" />
+            <TableColumn fx:id="statusTC" prefWidth="86.39996337890625" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="225.0" layoutY="91.0" mnemonicParsing="false" onAction="#editButtonOA" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: green;" text="Edit" textFill="WHITE" />
+      <Button layoutX="316.0" layoutY="91.0" mnemonicParsing="false" onAction="#deleteButtonOA" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: red;" text="Delete" />
+      <Button layoutX="566.0" layoutY="15.0" mnemonicParsing="false" onAction="#homeButtonOA" style="-fx-background-color: blue;" text="HOME" textFill="WHITE" />
+      <Label fx:id="outputLabel" layoutX="269.0" layoutY="56.0" prefHeight="26.0" prefWidth="194.0" textFill="#bf0404" />
+   </children>
+</AnchorPane>

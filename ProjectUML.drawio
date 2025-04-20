@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.13">
   <diagram name="Page-1" id="tGZniLlOBdnS9l2TfcLT">
-    <mxGraphModel dx="3147" dy="2418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
+    <mxGraphModel dx="2725" dy="2191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
         <mxCell id="s6e1yUUkH1MG8MLtkfFg-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RECRUITER&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;-companyName&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+postJobs()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="1100" y="120" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="MSgrG4DnEws9bKUU-TWq-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s6e1yUUkH1MG8MLtkfFg-7" edge="1" target="MSgrG4DnEws9bKUU-TWq-25">
+        <mxCell id="MSgrG4DnEws9bKUU-TWq-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s6e1yUUkH1MG8MLtkfFg-7" target="MSgrG4DnEws9bKUU-TWq-25" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="182" y="718" as="targetPoint" />
             <Array as="points">
@@ -295,13 +295,14 @@
         <mxCell id="MSgrG4DnEws9bKUU-TWq-72" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;TrainingProgram&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+String programID&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+String title&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+String objectives&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+String targetAudience&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+DateTime schedule&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+String trainer&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+List&amp;lt;String&amp;gt; materials&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+createProgram() : String&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+updateProgramDetails(details: String) : String&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+scheduleProgram(schedule: DateTime) : String&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="54" y="1290" width="360" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="2leXaQ1zfdEcev7ULTfE-1" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="s6e1yUUkH1MG8MLtkfFg-6" edge="1" source="MSgrG4DnEws9bKUU-TWq-25">
+        <mxCell id="2leXaQ1zfdEcev7ULTfE-1" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="MSgrG4DnEws9bKUU-TWq-25" target="s6e1yUUkH1MG8MLtkfFg-6" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="207.92000000000021" y="714.9700000000003" as="sourcePoint" />
             <mxPoint x="1029.9099999999996" y="170" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="364" y="10" />
-              <mxPoint x="770" y="10" />
+              <mxPoint x="460" y="-315" />
+              <mxPoint x="460" y="-160" />
+              <mxPoint x="770" y="-160" />
               <mxPoint x="770" y="190" />
               <mxPoint x="1030" y="190" />
               <mxPoint x="1030" y="180" />

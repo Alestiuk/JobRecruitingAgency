@@ -82,5 +82,6 @@
             <Font size="13.0" />
          </font>
       </Label>
+      <Button layoutX="493.0" layoutY="14.0" mnemonicParsing="false" onAction="#homeButtonOA" style="-fx-background-color: blue;" text="HOME" textFill="WHITE" />
    </children>
 </AnchorPane>

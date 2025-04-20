@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="408.0" prefWidth="631.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.JobApplicationRecruiterDashboardController">
    <children>
-      <Button layoutX="407.0" layoutY="74.0" mnemonicParsing="false" onAction="#searchButtonOAJobApplicationRecruiter" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: green;" text="Search" textFill="WHITE" />
+      <Button layoutX="391.0" layoutY="74.0" mnemonicParsing="false" onAction="#searchButtonOAJobApplicationRecruiter" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: green;" text="Search" textFill="WHITE" />
       <ComboBox fx:id="jobTypeCBJobApplicationRecruiter" layoutX="154.0" layoutY="75.0" prefWidth="150.0" promptText="Job Type" />
       <CheckBox fx:id="activeCheckBoxJobApplicationRecruiter" layoutX="324.0" layoutY="79.0" mnemonicParsing="false" text="Active">
          <font>
@@ -36,6 +36,8 @@
             <Font name="Cambria Bold" size="27.0" />
          </font>
       </Text>
-      <Button layoutX="483.0" layoutY="74.0" mnemonicParsing="false" onAction="#clearButtonJobApplicationRecruiterDashboardOA" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: E50B0B;" text="Clear" textFill="WHITE" />
+      <Button layoutX="467.0" layoutY="74.0" mnemonicParsing="false" onAction="#clearButtonJobApplicationRecruiterDashboardOA" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: E50B0B;" text="Clear" textFill="WHITE" />
+      <Button layoutX="555.0" layoutY="53.0" mnemonicParsing="false" onAction="#approveButtonOA" style="-fx-border-color: black;" text="Approve" />
+      <Button layoutX="555.0" layoutY="88.0" mnemonicParsing="false" onAction="#rejectButtonOA" prefHeight="26.0" prefWidth="62.0" style="-fx-border-color: black;" text="Reject" />
    </children>
 </AnchorPane>

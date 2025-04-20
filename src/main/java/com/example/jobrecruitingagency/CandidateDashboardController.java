@@ -17,11 +17,19 @@ public class CandidateDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
-        outputLabelCandidateDashboard.setText("Welcome to Candidate Dashboard");
+
     }
 
     @javafx.fxml.FXML
-    public void applyForAJobButtonOAcandidateDashboard(ActionEvent actionEvent) {
+    public void applyForAJobButtonOAcandidateDashboard(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("ApplyForJobCandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Apply For A Job");
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -83,10 +91,6 @@ public class CandidateDashboardController
         stage.setScene(scene);
         stage.setTitle("Manage Profile");
         stage.show();
-    }
-
-    @Deprecated
-    public void interviewPreparationButtonOAcandidateDashboard(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

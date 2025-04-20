@@ -59,4 +59,16 @@ public class ManageProfileCandidateDashboard
         stage.setTitle("Candidate Dashboard");
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void homeButtonOA(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("CandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Candidate Dashboard");
+        stage.show();
+    }
 }

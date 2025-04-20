@@ -22,6 +22,14 @@ public class RecruiterDashboardController
 
     @javafx.fxml.FXML
     public void feedbackImprovementButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("FeedbackImprovementRecruiterDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Feedback Improvement");
+        stage.show();
 
 
     }
@@ -75,7 +83,15 @@ public class RecruiterDashboardController
     }
 
     @javafx.fxml.FXML
-    public void manageJobsButtonOARecruiterDash(ActionEvent actionEvent) {
+    public void manageJobsButtonOARecruiterDash(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("ManageJobRecruiterDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Manage Jobs");
+        stage.show();
     }
 
     @javafx.fxml.FXML

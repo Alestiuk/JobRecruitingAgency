@@ -7,10 +7,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.InterviewInvitationCandidateDashboard">
    <children>
-      <TableView layoutX="-7.0" layoutY="70.0" prefHeight="330.0" prefWidth="618.0">
+      <TableView layoutX="-7.0" layoutY="124.0" prefHeight="276.0" prefWidth="618.0">
         <columns>
           <TableColumn fx:id="jobTitleTCIntervieweInvitationCandidate" prefWidth="122.4000244140625" text="Job Ttile" />
           <TableColumn fx:id="companyNameTCIntervieweInvitationCandidate" minWidth="2.4000244140625" prefWidth="116.800048828125" text="Company  Name" />
@@ -27,5 +26,7 @@
          </font>
       </Text>
       <Button layoutX="545.0" layoutY="13.0" mnemonicParsing="false" onAction="#homeButtonOA" style="-fx-background-color: blue;" text="HOME" textFill="WHITE" />
+      <Button layoutX="200.0" layoutY="69.0" mnemonicParsing="false" onAction="#accecptButtonOA" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: green;" text="Accecpt" textFill="WHITE" />
+      <Button layoutX="305.0" layoutY="69.0" mnemonicParsing="false" onAction="#declineButtonOA" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: red;" text="Decline" />
    </children>
 </AnchorPane>

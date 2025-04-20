@@ -60,5 +60,6 @@
       <TextArea fx:id="workExperienceTFManegProfileCandidate" layoutX="160.0" layoutY="283.0" prefHeight="89.0" prefWidth="356.0" promptText="work experience" />
       <TextArea fx:id="skillTFManegProfileCandidate" layoutX="160.0" layoutY="387.0" prefHeight="89.0" prefWidth="356.0" promptText="skill" />
       <Button layoutX="234.0" layoutY="494.0" mnemonicParsing="false" onAction="#confirmButtonOAManegProfileCandidate" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: green;" text="Confirm" textFill="WHITE" />
+      <Button layoutX="480.0" layoutY="15.0" mnemonicParsing="false" onAction="#homeButtonOA" style="-fx-background-color: blue;" text="HOME" textFill="WHITE" />
    </children>
 </AnchorPane>

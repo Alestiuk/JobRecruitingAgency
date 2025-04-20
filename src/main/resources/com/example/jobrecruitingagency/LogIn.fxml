@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="442.0" prefWidth="600.0" style="-fx-background-color: #042783;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.LogInController">
+<AnchorPane prefHeight="442.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobrecruitingagency.LogInController">
    <children>
-      <Label layoutX="256.0" layoutY="173.0" text="Phone Number:" textFill="WHITE">
+      <Label layoutX="256.0" layoutY="173.0" text="Phone Number:">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
       <Label layoutX="47.0" layoutY="152.0" />
-      <Label layoutX="286.0" layoutY="214.0" text="Password:" textFill="WHITE">
+      <Label layoutX="286.0" layoutY="214.0" text="Password:">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
@@ -26,8 +26,8 @@
       <TextField fx:id="phoneNumberTF" layoutX="373.0" layoutY="170.0" promptText="Phone Number" style="-fx-border-color: black;" />
       <PasswordField fx:id="passwordTF" layoutX="373.0" layoutY="210.0" promptText="Password" style="-fx-border-color: black;" />
       <Button layoutX="362.0" layoutY="290.0" mnemonicParsing="false" onAction="#logInOA" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #6495ED; -fx-border-color: black;" text="Log In" textFill="WHITE" />
-      <Button layoutX="524.0" layoutY="33.0" mnemonicParsing="false" onAction="#backButtonOALogIn" style="-fx-border-color: gray;" text="Back" />
-      <Label layoutX="261.0" layoutY="249.0" text="Account Type:" textFill="WHITE">
+      <Button layoutX="524.0" layoutY="33.0" mnemonicParsing="false" onAction="#backButtonOALogIn" style="-fx-border-color: gray; -fx-background-color: blue;" text="Back" textFill="WHITE" />
+      <Label layoutX="261.0" layoutY="249.0" text="Account Type:">
          <font>
             <Font name="Arial" size="15.0" />
          </font>

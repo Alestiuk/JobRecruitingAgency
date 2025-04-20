@@ -90,7 +90,7 @@ public class LogInController {
                 }
             }
 
-            outputLabelLogIn.setText("Phone or password incorrect!");
+            outputLabelLogIn.setText("Phone or Password incorrect or User Type is wrong!");
         } catch (IOException e) {
             outputLabelLogIn.setText("Error loading dashboard.");
         }

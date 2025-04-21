@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="dashboardBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.mansuraDash1">
+    <left>
+        <AnchorPane prefHeight="576.0" prefWidth="247.0" style="-fx-background-color: #05071F;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="73.0" fitWidth="67.0" layoutX="97.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@b6671781-e7c7-450e-90dc-7e39d54d2616-modified.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="78.0" layoutY="108.0" prefHeight="17.0" prefWidth="104.0" text="MANSURA RASHID" textFill="#aea29e" />
+                <Button layoutY="199.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#profitlossOA" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="Organize Training Sessions" />
+                <Button layoutY="325.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#monitorTrainingProgress" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text=" Monitor Training Progress" />
+                <Button layoutY="241.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewUpcomingTrainings" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="View Upcoming Trainings" />
+                <Button layoutY="451.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" />
+                <Button layoutY="409.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#evaluateTrainingEffectivenessOA" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text=" Evaluate Training Effectiveness" />
+                <Button layoutY="283.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#scheduleTraining" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="Schedule Training" />
+                <Button layoutY="493.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#signOutOA" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="Sign Out" />
+                <Button layoutY="157.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OverviewOA" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="Overview" />
+                <Button layoutY="367.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#manageTrainingBudgetsOA" prefHeight="42.0" prefWidth="261.0" stylesheets="@style.css" text="Manage Training Budgets" />
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

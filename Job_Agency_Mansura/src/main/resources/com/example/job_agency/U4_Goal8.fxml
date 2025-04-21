@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.ComplianceReviewChecklist">
+
+    <Label layoutX="281.0" layoutY="26.0" text="Checklist for Compliance Review" />
+
+    <Label layoutX="30" layoutY="70" text="Compliance Checklist" />
+
+    <TableView fx:id="complianceTableView" layoutX="52.0" layoutY="108.0" prefHeight="300" prefWidth="696.0">
+        <columns>
+            <TableColumn fx:id="itemColumn" prefWidth="500" text="Compliance Item" />
+            <TableColumn fx:id="statusColumn" prefWidth="200" text="Status" />
+        </columns>
+    </TableView>
+
+    <Button fx:id="saveReviewButton" layoutX="30" layoutY="450" onAction="#saveReviewButtonOA" prefWidth="150" text="Save Review" />
+    <Button fx:id="loadChecklistButton" layoutX="200" layoutY="450" onAction="#loadChecklistButtonOA" prefWidth="150" text="Load Checklist" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="530" textFill="green" visible="false" />
+
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.NegotiateEmploymentTerms">
+
+    <Label layoutX="250" layoutY="20" text="Negotiate Employment Terms" />
+
+    <Label layoutX="30" layoutY="70" text="Candidate ID" />
+    <TextField fx:id="candidateIdField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Candidate ID" />
+
+    <Label layoutX="30" layoutY="120" text="Salary Offered" />
+    <TextField fx:id="salaryOfferedField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Salary Offered" />
+
+    <Label layoutX="422.0" layoutY="66.0" text="Job Role" />
+    <TextField fx:id="jobRoleField" layoutX="542.0" layoutY="66.0" prefWidth="200" promptText="Enter Job Role" />
+
+    <Label layoutX="376.0" layoutY="124.0" text="Contract Duration (months)" />
+    <TextField fx:id="contractDurationField" layoutX="542.0" layoutY="120.0" prefWidth="200" promptText="Enter Contract Duration" />
+
+    <Label layoutX="36.0" layoutY="163.0" text="Start Date" />
+    <DatePicker fx:id="startDatePicker" layoutX="156.0" layoutY="163.0" prefWidth="200" />
+
+    <Button fx:id="saveEmploymentTermsButton" layoutX="63.0" layoutY="231.0" onAction="#saveEmploymentTermsButton1" prefWidth="150" text="Save Employment Terms" />
+
+    <Label layoutX="30" layoutY="360" text="Negotiated Employment Terms" />
+    <TableView fx:id="employmentTermsTableView" layoutX="30" layoutY="380" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="candidateIdColumn" prefWidth="120" text="Candidate ID" />
+            <TableColumn fx:id="salaryOfferedColumn" prefWidth="180" text="Salary Offered" />
+            <TableColumn fx:id="jobRoleColumn" prefWidth="180" text="Job Role" />
+            <TableColumn fx:id="contractDurationColumn" prefWidth="160" text="Contract Duration" />
+            <TableColumn fx:id="startDateColumn" prefWidth="120" text="Start Date" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="540" textFill="red" visible="false" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="560" textFill="green" visible="false" />
+   <Button fx:id="saveEmploymentTermsButton1" layoutX="516.0" layoutY="244.0" onAction="#viewEmploymentTermsButton1" prefWidth="150" text="View Employment Terms" />
+
+</AnchorPane>

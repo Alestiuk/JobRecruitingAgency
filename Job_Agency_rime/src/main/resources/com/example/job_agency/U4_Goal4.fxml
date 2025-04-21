@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.CoordinateInterviews">
+
+    <Label layoutX="250" layoutY="20" text="Coordinate Interviews" />
+
+    <Label layoutX="30" layoutY="70" text="Candidate ID" />
+    <TextField fx:id="candidateIdField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Candidate ID" />
+
+    <Label layoutX="442.0" layoutY="75.0" text="Interview Date" />
+    <DatePicker fx:id="interviewDatePicker" layoutX="562.0" layoutY="75.0" prefWidth="200" />
+
+    <Label layoutX="30.0" layoutY="121.0" text="Interview Time" />
+    <TextField fx:id="interviewTimeField" layoutX="150.0" layoutY="121.0" prefWidth="200" promptText="Enter Interview Time" />
+
+    <Label layoutX="436.0" layoutY="121.0" text="Interview Type" />
+    <ComboBox fx:id="interviewTypeComboBox" layoutX="556.0" layoutY="121.0" prefWidth="200" />
+
+    <Label layoutX="256.0" layoutY="175.0" text="Interview Panel" />
+    <ComboBox fx:id="interviewPanelComboBox" layoutX="376.0" layoutY="175.0" prefWidth="200" />
+
+    <Button fx:id="scheduleInterviewButton" layoutX="123.0" layoutY="244.0" onAction="#scheduleInterviewButtonOA" prefWidth="150" text="Schedule Interview" />
+
+    <Label layoutX="30" layoutY="360" text="Scheduled Interviews" />
+    <TableView fx:id="interviewTableView" layoutX="30" layoutY="380" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="candidateIdColumn" prefWidth="120" text="Candidate ID" />
+            <TableColumn fx:id="interviewDateColumn" prefWidth="180" text="Interview Date" />
+            <TableColumn fx:id="interviewTimeColumn" prefWidth="160" text="Interview Time" />
+            <TableColumn fx:id="interviewTypeColumn" prefWidth="160" text="Interview Type" />
+            <TableColumn fx:id="interviewPanelColumn" prefWidth="120" text="Interview Panel" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="550" textFill="red" visible="false" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="570" textFill="green" visible="false" />
+   <Button layoutX="455.0" layoutY="244.0" mnemonicParsing="false" onAction="#viewSavedDataOA" prefHeight="25.0" prefWidth="213.0" text="View Saved Data" />
+
+</AnchorPane>

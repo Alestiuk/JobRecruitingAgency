@@ -75,6 +75,46 @@ public class ApplyForJobCandidateDashboard
 
     @javafx.fxml.FXML
     public void applyButtonOA(ActionEvent actionEvent) {
+        String phoneNumber = phoneNumberTF.getText();
+
+        // Validate phone number
+        if (!phoneNumber.matches("01\\d{9}")) {
+            outputLabel.setText("Enter a valid 11-digit phone number starting with 01");
+            return;
+        }
+
+        // Find selected job
+        JobList selectedJob = jobTableView.getSelectionModel().getSelectedItem();
+        if (selectedJob == null) {
+            outputLabel.setText("Please select a job to apply for.");
+            return;
+        }
+
+        // Load candidates
+        ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.bin");
+        Candidate matchingCandidate = null;
+        for (Candidate c : candidates) {
+            if (c.getPhoneNumber().equals(phoneNumber)) {
+                matchingCandidate = c;
+                break;
+            }
+        }
+
+        // If candidate not found
+        if (matchingCandidate == null) {
+            outputLabel.setText("No user found via this contact");
+            return;
+        }
+
+        // Save Application
+        Application application = new Application(selectedJob, matchingCandidate);
+        try {
+            FileHelper.saveToFile("applications.bin", application);
+            outputLabel.setText("Application submitted successfully!");
+        } catch (IOException e) {
+            outputLabel.setText("Error saving application.");
+            e.printStackTrace();
+        }
     }
     public List<JobList> loadJobsFromFile() {
         List<JobList> jobLists = new ArrayList<>();

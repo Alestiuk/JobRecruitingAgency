@@ -53,7 +53,7 @@ public class CreateAccountCandidateController
         String password = passwordTFCreateAccountCandidate.getText();
         String retypePassword = retypePasswordTFCreateAccountCandidate.getText();
         String userType = "Candidate";
-        //Validation Checker
+
         if (fullName.isEmpty()) {
             outputLabel.setText("Please enter your full name");
             return;
@@ -91,7 +91,6 @@ public class CreateAccountCandidateController
          }
         outputLabel.setText("Account created successfully!");
 
-        // If all validation passed, create account
 
         Candidate candidate = new Candidate(fullName,gender,skill,email,password,userType,phoneNumber);
         candidate.createCandidate();

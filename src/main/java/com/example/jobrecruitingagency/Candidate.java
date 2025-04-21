@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class Candidate implements Serializable {
     String fullName, gender,skill, email,password,userType,phoneNumber;
 
+
     public Candidate(String fullName, String gender, String skill, String email, String password, String userType, String phoneNumber) {
         this.fullName = fullName;
         this.gender = gender;

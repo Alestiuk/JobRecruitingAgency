@@ -21,6 +21,8 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class ApplyForJobCandidateDashboard
 {
     @javafx.fxml.FXML
@@ -48,8 +50,8 @@ public class ApplyForJobCandidateDashboard
 
     @javafx.fxml.FXML
     public void initialize() {
-        ObservableList<JobList> jobData = FXCollections.observableArrayList(loadJobsFromFile());
-        jobTableView.setItems(jobData);
+        ObservableList<JobList> jobListObservableListData = FXCollections.observableArrayList(loadJobsFromFile());
+        jobTableView.setItems(jobListObservableListData);
 
         jobTitleTC.setCellValueFactory(new PropertyValueFactory<>("jobTitle"));
         departmentTC.setCellValueFactory(new PropertyValueFactory<>("department"));
@@ -77,20 +79,16 @@ public class ApplyForJobCandidateDashboard
     public void applyButtonOA(ActionEvent actionEvent) {
         String phoneNumber = phoneNumberTF.getText();
 
-        // Validate phone number
         if (!phoneNumber.matches("01\\d{9}")) {
             outputLabel.setText("Enter a valid 11-digit phone number starting with 01");
             return;
         }
 
-        // Find selected job
         JobList selectedJob = jobTableView.getSelectionModel().getSelectedItem();
         if (selectedJob == null) {
             outputLabel.setText("Please select a job to apply for.");
             return;
         }
-
-        // Load candidates
         ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.bin");
         Candidate matchingCandidate = null;
         for (Candidate c : candidates) {
@@ -99,15 +97,28 @@ public class ApplyForJobCandidateDashboard
                 break;
             }
         }
-
-        // If candidate not found
         if (matchingCandidate == null) {
             outputLabel.setText("No user found via this contact");
             return;
         }
 
-        // Save Application
-        Application application = new Application(selectedJob, matchingCandidate);
+Application application = new Application(
+    selectedJob.getJobTitle(),
+    selectedJob.getDepartment(),
+    selectedJob.getQualification(),
+    selectedJob.getDescription(),
+    selectedJob.getResponsibilities(),
+    selectedJob.getSalary(),
+    selectedJob.getDeadline(),
+    selectedJob.getType(),
+    matchingCandidate.getFullName(),
+    matchingCandidate.getGender(),
+    matchingCandidate.getSkill(),
+    matchingCandidate.getEmail(),
+    matchingCandidate.getPassword(),
+    matchingCandidate.getUserType(),
+    phoneNumber
+);
         try {
             FileHelper.saveToFile("applications.bin", application);
             outputLabel.setText("Application submitted successfully!");

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.ManageCandidateRecords">
+
+    <Label layoutX="320.0" layoutY="26.0" text="Manage Candidate Records" />
+
+    <Label layoutX="30" layoutY="70" text="Candidate ID" />
+    <TextField fx:id="candidateIdField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Candidate ID" />
+
+    <Label layoutX="30" layoutY="120" text="Name" />
+    <TextField fx:id="nameField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Name" />
+
+    <Label layoutX="406.0" layoutY="70.0" text="Age" />
+    <TextField fx:id="ageField" layoutX="526.0" layoutY="70.0" prefWidth="200" promptText="Enter Age" />
+
+    <Label layoutX="406.0" layoutY="120.0" text="Qualification" />
+    <TextField fx:id="qualificationField" layoutX="526.0" layoutY="120.0" prefWidth="200" promptText="Enter Qualification" />
+
+    <Label layoutX="30.0" layoutY="172.0" text="Skills" />
+    <TextField fx:id="skillsField" layoutX="150.0" layoutY="172.0" prefWidth="200" promptText="Enter Skills" />
+
+    <Label layoutX="406.0" layoutY="168.0" text="Experience (Years)" />
+    <TextField fx:id="experienceField" layoutX="526.0" layoutY="168.0" prefWidth="200" promptText="Enter Experience" />
+
+    <Button fx:id="addCandidateButton" layoutX="65.0" layoutY="245.0" onAction="#addCandidateButtonOA" prefWidth="150" text="Add Candidate" />
+    <Button fx:id="ViewCandidateButton" layoutX="598.0" layoutY="245.0" onAction="#ViewCandidateButtonOA" prefWidth="150" text="View Candidate" />
+
+    <Label layoutX="30.0" layoutY="324.0" text="Candidate Records" />
+    <TableView fx:id="candidateTableView" layoutX="30.0" layoutY="344.0" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="candidateIdColumn" prefWidth="120" text="Candidate ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="160" text="Name" />
+            <TableColumn fx:id="ageColumn" prefWidth="120" text="Age" />
+            <TableColumn fx:id="qualificationColumn" prefWidth="160" text="Qualification" />
+            <TableColumn fx:id="skillsColumn" prefWidth="120" text="Skills" />
+            <TableColumn fx:id="experienceColumn" prefWidth="120" text="Experience" />
+        </columns>
+    </TableView>
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="550" prefHeight="17.0" prefWidth="752.0" textFill="green" visible="false" />
+</AnchorPane>

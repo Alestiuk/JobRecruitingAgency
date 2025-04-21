@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.ManageTrainingBudgets">
+
+    <Label layoutX="332.0" layoutY="27.0" text="Manage Training Budgets" />
+
+    <Label layoutX="30" layoutY="70" text="Training Name" />
+    <TextField fx:id="trainingNameField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Training Name" />
+
+    <Label layoutX="434.0" layoutY="70.0" text="Budget Amount" />
+    <TextField fx:id="budgetAmountField" layoutX="554.0" layoutY="70.0" prefWidth="200" promptText="Enter Budget Amount" />
+
+    <Label layoutX="30.0" layoutY="125.0" text="Department" />
+    <TextField fx:id="departmentField" layoutX="150.0" layoutY="125.0" prefWidth="200" promptText="Enter Department Name" />
+
+    <Label layoutX="434.0" layoutY="121.0" text="Approval Status" />
+    <ComboBox fx:id="approvalStatusComboBox" layoutX="554.0" layoutY="121.0" prefWidth="200" />
+
+    <Button fx:id="saveBudgetButton" layoutX="519.0" layoutY="227.0" onAction="#saveBudgetButtonOA" prefWidth="150" text="Save Budget" />
+
+    <Label layoutX="30" layoutY="310" text="Training Budget Data" />
+    <TableView fx:id="trainingBudgetTable" layoutX="30" layoutY="330" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="trainingNameColumn" prefWidth="180" text="Training Name" />
+            <TableColumn fx:id="budgetAmountColumn" prefWidth="180" text="Budget Amount" />
+            <TableColumn fx:id="departmentColumn" prefWidth="180" text="Department" />
+            <TableColumn fx:id="approvalStatusColumn" prefWidth="180" text="Approval Status" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="500" textFill="red" visible="false" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="520" textFill="green" visible="false" />
+   <Button layoutX="143.0" layoutY="227.0" mnemonicParsing="false" onAction="#draftOA" prefHeight="25.0" prefWidth="91.0" text="Draft" />
+
+</AnchorPane>

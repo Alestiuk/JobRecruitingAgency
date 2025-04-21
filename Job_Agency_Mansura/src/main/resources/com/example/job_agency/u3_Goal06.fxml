@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.MonitorTrainingProgress">
+
+    <Label layoutX="297.0" layoutY="23.0" text="Monitor Training Progress" />
+
+    <Label layoutX="30" layoutY="70" text="Training ID" />
+    <TextField fx:id="trainingIdField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Training ID" />
+
+    <Label layoutX="30" layoutY="120" text="Completion Percentage" />
+    <TextField fx:id="completionPercentageField" layoutX="166.0" layoutY="116.0" prefWidth="200" promptText="Enter Completion Percentage" />
+
+    <Label layoutX="30.0" layoutY="191.0" text="Trainer Feedback" />
+    <TextArea fx:id="trainerFeedbackField" layoutX="150" layoutY="170" prefHeight="59.0" prefWidth="610.0" promptText="Enter trainer feedback" />
+
+    <Label layoutX="423.0" layoutY="70.0" text="Completion Date" />
+    <DatePicker fx:id="completionDatePicker" layoutX="543.0" layoutY="70.0" prefWidth="200" />
+
+    <Button fx:id="saveProgressButton" layoutX="30.0" layoutY="318.0" onAction="#saveProgressButtonOA" prefWidth="150" text="Save Progress" />
+
+    <Label layoutX="30" layoutY="390" text="Training Progress Data" />
+    <TableView fx:id="progressTableView" layoutX="30" layoutY="410" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="trainingIdColumn" prefWidth="180" text="Training ID" />
+            <TableColumn fx:id="completionPercentageColumn" prefWidth="180" text="Completion Percentage" />
+            <TableColumn fx:id="trainerFeedbackColumn" prefWidth="180" text="Trainer Feedback" />
+            <TableColumn fx:id="completionDateColumn" prefWidth="180" text="Completion Date" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="570" textFill="red" visible="false" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="590" textFill="green" visible="false" />
+</AnchorPane>

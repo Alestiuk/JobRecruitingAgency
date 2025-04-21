@@ -75,7 +75,7 @@ public class JobPostingController
         }
 
         JobList job = new JobList(department, jobTitle, qualification, description, responsibilities, salaryText, deadline, type);
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("jobs.dat", true))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("jobs.bin", true))) {
             out.writeObject(job);
         } catch (IOException e) {
             e.printStackTrace();

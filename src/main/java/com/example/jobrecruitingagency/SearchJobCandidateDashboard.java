@@ -44,7 +44,9 @@ public class SearchJobCandidateDashboard
         jobTypeCBSearchCandidateDashboard.getItems().addAll("Full Time", "Part Time", "Internship");
         ObservableList<JobList> jobData = FXCollections.observableArrayList(loadJobsFromFile());
         tableViewCandidateSearch.setItems(jobData);
+        statusCheckBoxCandidateSearch.setSelected(true);
 
+        statusTCCandidateSearch.setCellValueFactory(new PropertyValueFactory<>("status"));
         jobTitleTCCandidateSearch.setCellValueFactory(new PropertyValueFactory<>("jobTitle"));
         salaryTCCandidateSearch.setCellValueFactory(new PropertyValueFactory<>("salary"));
         deadlineTCCandidateSearch.setCellValueFactory(new PropertyValueFactory<>("deadline"));
@@ -77,14 +79,12 @@ public class SearchJobCandidateDashboard
     }
     public List<JobList> loadJobsFromFile() {
         List<JobList> jobLists = new ArrayList<>();
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("jobs.dat"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("jobs.bin"))) {
             while (true) {
                 JobList job = (JobList) in.readObject();
                 jobLists.add(job);
             }
-        } catch (EOFException eof) {
-            // End of file reached – normal behavior
-        } catch (Exception e) {
+        }  catch (Exception e) {
             e.printStackTrace();
         }
         return jobLists;

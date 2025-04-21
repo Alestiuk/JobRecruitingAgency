@@ -12,8 +12,6 @@ import java.io.IOException;
 
 public class MainDashboardController
 {
-    @javafx.fxml.FXML
-    private ImageView imageMainDashBoard;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,5 +43,29 @@ public class MainDashboardController
 
     @javafx.fxml.FXML
     public void supportButtonOAmainDashboard(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void recruiterTestOA(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("RecruiterDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Recruiter Dashboard");
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void candidateTestOA(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(AgencyApplication.class.getResource("CandidateDashboard.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Candidate Dashboard");
+        stage.show();
     }
 }

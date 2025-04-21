@@ -159,7 +159,7 @@ public class Recruiter  implements Serializable {
 
     public void createRecruiter() {
         try {
-            FileHelper.saveToFile("recruiters.dat", this);
+            FileHelper.saveToFile("recruiters.bin", this);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

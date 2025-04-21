@@ -78,17 +78,16 @@ public class ApplyForJobCandidateDashboard
     }
     public List<JobList> loadJobsFromFile() {
         List<JobList> jobLists = new ArrayList<>();
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("jobs.dat"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("jobs.bin"))) {
             while (true) {
                 JobList job = (JobList) in.readObject();
                 jobLists.add(job);
             }
-        } catch (EOFException eof) {
-            // End of file reached – normal behavior
         } catch (Exception e) {
             e.printStackTrace();
         }
         return jobLists;
+
     }
 
 }

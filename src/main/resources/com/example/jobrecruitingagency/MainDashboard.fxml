@@ -35,5 +35,7 @@
             <Image url="@image/MainDashboardImage.png" />
          </image>
       </ImageView>
+      <Button layoutX="117.0" layoutY="37.0" mnemonicParsing="false" onAction="#candidateTestOA" text="Candidate" />
+      <Button layoutX="201.0" layoutY="37.0" mnemonicParsing="false" onAction="#recruiterTestOA" text="Recruiter" />
    </children>
 </AnchorPane>

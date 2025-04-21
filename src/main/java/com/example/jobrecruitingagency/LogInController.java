@@ -55,7 +55,7 @@ public class LogInController {
 
         try {
             if (accountType.equals("Candidate")) {
-                ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.dat");
+                ArrayList<Candidate> candidates = FileHelper.loadFromFile("candidates.bin");
                 for (Candidate c : candidates) {
                     if (c.getPhoneNumber().equals(phoneNumber) && c.getPassword().equals(password)) {
                         FXMLLoader loader = new FXMLLoader(AgencyApplication.class.getResource("CandidateDashboard.fxml"));
@@ -72,7 +72,7 @@ public class LogInController {
                     }
                 }
             } else if (accountType.equals("Recruiter")) {
-                ArrayList<Recruiter> recruiters = FileHelper.loadFromFile("recruiters.dat");
+                ArrayList<Recruiter> recruiters = FileHelper.loadFromFile("recruiters.bin");
                 for (Recruiter r : recruiters) {
                     if (r.getContactPersonPhoneNumber().equals(phoneNumber) && r.getPassword().equals(password)) {
                         FXMLLoader loader = new FXMLLoader(AgencyApplication.class.getResource("RecruiterDashboard.fxml"));

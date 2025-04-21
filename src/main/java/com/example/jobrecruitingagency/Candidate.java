@@ -87,7 +87,7 @@ public class Candidate implements Serializable {
 
     public void createCandidate() {
         try {
-            FileHelper.saveToFile("candidates.dat", this);
+            FileHelper.saveToFile("candidates.bin", this);
         } catch (IOException e) {
             throw new RuntimeException(e);
         };

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="433.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.job_agency.ViewUpcomingTrainings">
+
+    <Label layoutX="347.0" layoutY="22.0" text="Upcoming Trainings" />
+
+    <Button layoutX="38.0" layoutY="78.0" onAction="#loadDataOA" prefWidth="100" text="LOAD DATA" />
+
+    <Label layoutX="30" layoutY="120" text="Training Sessions" />
+    <TableView fx:id="upcomingTrainingsTableView" layoutX="30" layoutY="140" prefHeight="300" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="trainingIdColumn" prefWidth="120" text="Training ID" />
+            <TableColumn fx:id="trainingTitleColumn" prefWidth="160" text="Training Title" />
+            <TableColumn fx:id="trainerColumn" prefWidth="160" text="Trainer Name" />
+            <TableColumn fx:id="dateColumn" prefWidth="120" text="Training Date" />
+            <TableColumn fx:id="durationColumn" prefWidth="120" text="Duration (hours)" />
+            <TableColumn fx:id="participantsColumn" prefWidth="120" text="Participants" />
+        </columns>
+    </TableView>
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="490" textFill="green" visible="false" />
+
+</AnchorPane>

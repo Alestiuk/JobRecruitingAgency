@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.AssessClientHiringNeeds">
+
+    <Label layoutX="20.0" layoutY="20.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Assess Client Hiring Needs" />
+
+    <Label layoutX="20.0" layoutY="60.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Client Information" />
+
+    <Label layoutX="20.0" layoutY="100.0" style="-fx-font-size: 14px;" text="Client Name" />
+    <TextField fx:id="clientNameField" layoutX="160.0" layoutY="100.0" prefWidth="300.0" promptText="Enter client name" />
+
+    <Label layoutX="20.0" layoutY="140.0" style="-fx-font-size: 14px;" text="Job Title" />
+    <TextField fx:id="jobTitleField" layoutX="160.0" layoutY="140.0" prefWidth="300.0" promptText="Enter job title" />
+
+    <Label layoutX="20.0" layoutY="180.0" style="-fx-font-size: 14px;" text="Required Skills" />
+    <TextField fx:id="requiredSkillsField" layoutX="160.0" layoutY="180.0" prefWidth="300.0" promptText="Enter required skills" />
+
+    <Label layoutX="20.0" layoutY="220.0" style="-fx-font-size: 14px;" text="Experience Level" />
+    <ComboBox fx:id="experienceLevelComboBox" layoutX="160.0" layoutY="220.0" prefWidth="300.0" />
+
+    <Label layoutX="20.0" layoutY="260.0" style="-fx-font-size: 14px;" text="Salary Range" />
+    <TextField fx:id="salaryRangeField" layoutX="160.0" layoutY="260.0" prefWidth="300.0" promptText="Enter salary range" />
+
+    <Label layoutX="20.0" layoutY="300.0" style="-fx-font-size: 14px;" text="Job Description" />
+    <TextArea fx:id="jobDescriptionArea" layoutX="160.0" layoutY="300.0" prefHeight="100.0" prefWidth="300.0" promptText="Enter job description" />
+
+    <Button layoutX="20.0" layoutY="420.0" onAction="#submitHiringNeeds" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Submit Client Hiring Needs" />
+
+    <Label fx:id="statusLabel" layoutX="20.0" layoutY="470.0" style="-fx-font-size: 14px; -fx-text-fill: green;" />
+
+    <Label layoutX="20.0" layoutY="510.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Saved Client Hiring Needs" />
+
+    <TableView fx:id="clientHiringNeedsTable" layoutX="20.0" layoutY="540.0" prefHeight="150.0" prefWidth="760.0">
+        <columns>
+            <TableColumn fx:id="clientNameColumn" prefWidth="150.0" text="Client Name" />
+            <TableColumn fx:id="jobTitleColumn" prefWidth="150.0" text="Job Title" />
+            <TableColumn fx:id="requiredSkillsColumn" prefWidth="150.0" text="Required Skills" />
+            <TableColumn fx:id="experienceLevelColumn" prefWidth="150.0" text="Experience Level" />
+            <TableColumn fx:id="salaryRangeColumn" prefWidth="150.0" text="Salary Range" />
+            <TableColumn fx:id="jobDescriptionColumn" prefWidth="150.0" text="Job Description" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

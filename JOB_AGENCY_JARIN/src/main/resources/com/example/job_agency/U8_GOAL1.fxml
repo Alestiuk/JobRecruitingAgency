@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.PrepareSalariesController">
+
+    <Label layoutX="324.0" layoutY="26.0" text="Prepare Salaries for All Staff" />
+
+    <Label layoutX="30" layoutY="70" text="Staff ID" />
+    <TextField fx:id="staffIdField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Staff ID" />
+
+    <Label layoutX="30" layoutY="120" text="Staff Name" />
+    <TextField fx:id="staffNameField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Staff Name" />
+
+    <Label layoutX="433.0" layoutY="70.0" text="Designation" />
+    <TextField fx:id="designationField" layoutX="553.0" layoutY="70.0" prefWidth="200" promptText="Enter Designation" />
+
+    <Label layoutX="433.0" layoutY="120.0" text="Basic Salary" />
+    <TextField fx:id="basicSalaryField" layoutX="553.0" layoutY="120.0" prefWidth="200" promptText="Enter Basic Salary" />
+
+    <Label layoutX="37.0" layoutY="169.0" text="Bonus" />
+    <TextField fx:id="bonusField" layoutX="157.0" layoutY="169.0" prefWidth="200" promptText="Enter Bonus" />
+
+    <Label layoutX="37.0" layoutY="219.0" text="Deductions" />
+    <TextField fx:id="deductionsField" layoutX="157.0" layoutY="219.0" prefWidth="200" promptText="Enter Deductions" />
+
+    <Label layoutX="433.0" layoutY="165.0" text="Salary Date" />
+    <DatePicker fx:id="salaryDatePicker" layoutX="553.0" layoutY="165.0" prefWidth="200" />
+
+    <Button fx:id="generateSalaryButton" layoutX="337.0" layoutY="268.0" onAction="#generateSalaryButtonClick" prefWidth="120" text="Generate Salary" />
+
+    <Label layoutX="21.0" layoutY="305.0" text="Generated Salary Details" />
+
+    <TableView fx:id="salaryTableView" layoutX="83.0" layoutY="332.0" prefHeight="150" prefWidth="641.0">
+        <columns>
+            <TableColumn fx:id="staffIdColumn" prefWidth="120" text="Staff ID" />
+            <TableColumn fx:id="basicSalaryColumn" prefWidth="120" text="Basic Salary" />
+            <TableColumn fx:id="bonusColumn" prefWidth="120" text="Bonus" />
+            <TableColumn fx:id="totalSalaryColumn" prefWidth="120" text="Total Salary" />
+            <TableColumn fx:id="designationColumn" prefWidth="160" text="Designation" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="650" prefHeight="17.0" prefWidth="720.0" textFill="red" visible="false" />
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.AcceptFinancialRecommendations">
+
+    <Label layoutX="221.0" layoutY="20.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Accept Financial Recommendations" />
+
+    <Button layoutX="20.0" layoutY="60.0" onAction="#loadRecommendations" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Load Recommendations" />
+
+    <TableView fx:id="recommendationTable" layoutX="20.0" layoutY="100.0" prefHeight="300.0" prefWidth="701.0">
+        <columns>
+            <TableColumn fx:id="recommendationTitleColumn" prefWidth="200.0" text="Recommendation Title" />
+            <TableColumn fx:id="categoryColumn" prefWidth="200.0" text="Category" />
+            <TableColumn fx:id="amountColumn" prefWidth="150.0" text="Amount" />
+            <TableColumn fx:id="statusColumn" prefWidth="150.0" text="Status" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorLabel" layoutX="20.0" layoutY="540.0" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+
+    <Button layoutX="12.0" layoutY="500.0" onAction="#approveRecommendation" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Approve Recommendation" />
+
+    <Button layoutX="216.0" layoutY="500.0" onAction="#rejectRecommendation" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Reject Recommendation" />
+
+    <Label layoutX="350.0" layoutY="420.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Saved Data" />
+
+    <TextArea fx:id="savedDataTextArea" editable="false" layoutX="394.0" layoutY="450.0" prefHeight="100.0" prefWidth="400.0" promptText="Recommendation results will appear here..." />
+
+</AnchorPane>

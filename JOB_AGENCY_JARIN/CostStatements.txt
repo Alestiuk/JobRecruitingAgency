@@ -1,0 +1,7 @@
+August,2024,Expenss,5000
+July,2025,withdraw,5000
+July,2025,withdraw,5000
+September,2025,expense,6000
+July,2025,withdraw,5000
+September,2025,expense,6000
+October,2025,transfer,75000

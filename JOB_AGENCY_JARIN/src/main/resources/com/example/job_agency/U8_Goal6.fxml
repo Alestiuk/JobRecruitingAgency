@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.StatementCost">
+
+    <Label layoutX="306.0" layoutY="23.0" text="Monthly and Yearly Cost Statement" />
+
+    <Label layoutX="30" layoutY="70" text="Month" />
+    <ComboBox fx:id="monthComboBox" layoutX="150" layoutY="70" prefWidth="200" />
+
+    <Label layoutX="30" layoutY="120" text="Year" />
+    <TextField fx:id="yearField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Year" />
+
+    <Label layoutX="407.0" layoutY="75.0" text="Cost Category" />
+    <TextField fx:id="costCategoryField" layoutX="527.0" layoutY="75.0" prefWidth="200" promptText="Enter Cost Category" />
+
+    <Label layoutX="407.0" layoutY="120.0" text="Cost Amount" />
+    <TextField fx:id="costAmountField" layoutX="527.0" layoutY="120.0" prefWidth="200" promptText="Enter Cost Amount" />
+
+    <Button fx:id="addCostButton" layoutX="288.0" layoutY="201.0" onAction="#handleAddCostStatement" prefWidth="150" text="Add Cost Statement" />
+
+    <Label layoutX="78.0" layoutY="243.0" text="Monthly and Yearly Cost Data" />
+    <TableView fx:id="costTableView" layoutX="128.0" layoutY="260.0" prefHeight="150" prefWidth="544.0">
+        <columns>
+            <TableColumn fx:id="monthColumn" prefWidth="120" text="Month" />
+            <TableColumn fx:id="yearColumn" prefWidth="120" text="Year" />
+            <TableColumn fx:id="amountColumn" prefWidth="120" text="Cost Amount" />
+            <TableColumn fx:id="categoryColumn" prefWidth="180" text="Cost Category" />
+        </columns>
+    </TableView>
+
+    <Label layoutX="30.0" layoutY="490.0" text="Cost Distribution Bar Chart" />
+    <BarChart fx:id="costBarChart" layoutX="30.0" layoutY="510.0" prefHeight="150" prefWidth="740">
+        <xAxis>
+            <CategoryAxis fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="yAxis" />
+        </yAxis>
+    </BarChart>
+
+    <Label fx:id="errorMessage" layoutX="30" layoutY="690" prefHeight="17.0" prefWidth="713.0" textFill="red" visible="false" />
+    <Label fx:id="confirmationMessage" layoutX="30" layoutY="710" textFill="green" visible="false" />
+    <Button layoutX="337.0" layoutY="435.0" mnemonicParsing="false" onAction="#barChartOA" text="Show Bar Chart" />
+    <Button layoutX="506.0" layoutY="201.0" mnemonicParsing="false" onAction="#viewOA" prefHeight="25.0" prefWidth="127.0" text="View" />
+</AnchorPane>

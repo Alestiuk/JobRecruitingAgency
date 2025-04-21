@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="457.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.UpdateFinanceRecordsController">
+
+    <Label layoutX="250" layoutY="20" text="Update Finance and Accounts Records" />
+
+    <Label layoutX="30" layoutY="70" text="Account Name" />
+    <TextField fx:id="accountNameField" layoutX="150" layoutY="70" prefWidth="200" promptText="Enter Account Name" />
+
+    <Label layoutX="30" layoutY="120" text="Account Number" />
+    <TextField fx:id="accountNumberField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Account Number" />
+
+    <Label layoutX="400.0" layoutY="70.0" text="Amount" />
+    <TextField fx:id="amountField" layoutX="520.0" layoutY="70.0" prefWidth="200" promptText="Enter Amount" />
+
+    <Label layoutX="400.0" layoutY="120.0" text="Transaction Type" />
+    <ComboBox fx:id="transactionTypeComboBox" layoutX="520.0" layoutY="120.0" prefWidth="200" />
+
+    <Button fx:id="updateRecordButton" layoutX="208.0" layoutY="184.0" onAction="#updateRecordButtonOA" prefWidth="150" text="Update Record" />
+
+    <Label layoutX="24.0" layoutY="209.0" text="Finance Records" />
+
+    <TableView fx:id="financeRecordsTable" layoutX="121.0" layoutY="245.0" prefHeight="150" prefWidth="602.0">
+        <columns>
+            <TableColumn fx:id="accountNameColumn" prefWidth="180" text="Account Name" />
+            <TableColumn fx:id="accountNumberColumn" prefWidth="180" text="Account Number" />
+            <TableColumn fx:id="amountColumn" prefWidth="120" text="Amount" />
+            <TableColumn fx:id="transactionTypeColumn" prefWidth="120" text="Transaction Type" />
+        </columns>
+    </TableView>
+
+    <Button layoutX="479.0" layoutY="184.0" onAction="#viewRecordOA" prefWidth="150" text="View Record" />
+</AnchorPane>

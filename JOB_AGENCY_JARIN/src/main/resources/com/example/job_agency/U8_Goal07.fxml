@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="478.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.MonitorPaymentStatusController">
+
+    <Label layoutX="301.0" layoutY="23.0" text="Monitor Payment Status" />
+
+    <Label layoutX="30" layoutY="70" text="Payment Type" />
+    <ComboBox fx:id="paymentTypeComboBox" layoutX="150" layoutY="70" prefWidth="200" />
+
+    <Label layoutX="30" layoutY="120" text="Payment Amount" />
+    <TextField fx:id="paymentAmountField" layoutX="150" layoutY="120" prefWidth="200" promptText="Enter Payment Amount" />
+
+    <Label layoutX="429.0" layoutY="116.0" text="Payment Status" />
+    <ComboBox fx:id="paymentStatusComboBox" layoutX="549.0" layoutY="116.0" prefWidth="200" />
+
+    <Button fx:id="updatePaymentButton" layoutX="36.0" layoutY="186.0" onAction="#updatePaymentButtonOA" prefWidth="150" text="Update Payment Status" />
+
+    <Label layoutX="30" layoutY="260" text="Payment Status Data" />
+    <TableView fx:id="paymentStatusTable" layoutX="30" layoutY="280" prefHeight="150" prefWidth="740">
+        <columns>
+            <TableColumn fx:id="paymentTypeColumn" prefWidth="180" text="Payment Type" />
+            <TableColumn fx:id="paymentAmountColumn" prefWidth="180" text="Payment Amount" />
+            <TableColumn fx:id="paymentStatusColumn" prefWidth="180" text="Payment Status" />
+            <TableColumn fx:id="paymentDateColumn" prefWidth="200" text="Date" />
+        </columns>
+    </TableView>
+    <DatePicker fx:id="datepicker" layoutX="552.0" layoutY="58.0" />
+    <Label layoutX="470.0" layoutY="62.0" text="Date" />
+    <Button layoutX="490.0" layoutY="199.0" mnemonicParsing="false" onAction="#viewRecordOA" prefHeight="25.0" prefWidth="150.0" text="View" />
+</AnchorPane>
+

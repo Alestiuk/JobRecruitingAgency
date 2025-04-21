@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.job_agency.ManageAgencyBudget">
+
+    <Label layoutX="299.0" layoutY="14.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Manage Agency Budget" />
+
+    <Button layoutX="20.0" layoutY="54.0" onAction="#loadData" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Load Data" />
+
+    <TableView fx:id="budgetTable" layoutX="20.0" layoutY="100.0" prefHeight="250.0" prefWidth="834.0">
+        <columns>
+            <TableColumn fx:id="categoryColumn" prefWidth="200.0" text="Category" />
+            <TableColumn fx:id="currentBudgetColumn" prefWidth="200.0" text="Current Budget" />
+            <TableColumn fx:id="advertisingColumn" prefWidth="150.0" text="Advertising" />
+            <TableColumn fx:id="jobPostingsColumn" prefWidth="150.0" text="Job Postings" />
+            <TableColumn fx:id="recruiterFeesColumn" prefWidth="150.0" text="Recruiter Fees" />
+        </columns>
+    </TableView>
+
+    <Label layoutX="20.0" layoutY="380.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Modify Budget" />
+
+    <Label layoutX="20.0" layoutY="420.0" style="-fx-font-size: 14px;" text="Select Budget Category" />
+    <ComboBox fx:id="budgetCategoryComboBox" layoutX="199.0" layoutY="418.0" prefWidth="200.0" />
+
+    <Label layoutX="20.0" layoutY="460.0" style="-fx-font-size: 14px;" text="Enter New Budget Amount" />
+    <TextField fx:id="newBudgetAmountField" layoutX="199.0" layoutY="458.0" onKeyTyped="#validateNumericInput" prefWidth="200.0" promptText="Enter new budget amount" />
+
+    <Label fx:id="errorLabel" layoutX="20.0" layoutY="500.0" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+
+    <Button layoutX="348.0" layoutY="520.0" onAction="#saveChanges" style="-fx-font-size: 14px; -fx-padding: 10px;" text="Save Changes" />
+
+</AnchorPane>

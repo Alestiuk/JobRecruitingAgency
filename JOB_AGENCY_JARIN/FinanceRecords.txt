@@ -1,0 +1,7 @@
+jarin,22222,3000.0,Withdrawal
+rime,123456,500.0,Deposit
+rime,123456,500.0,Deposit
+saidur,56231,10000.0,Transfer
+rime,123456,500.0,Deposit
+saidur,56231,10000.0,Transfer
+miyad,89456,60000.0,Withdrawal
